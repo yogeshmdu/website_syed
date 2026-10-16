@@ -1,0 +1,6014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Instant Theme Initializer to prevent flicker -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('syed_stall_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Syed Broilers & Mutton Stall | Fresh Chicken & Fresh Mutton | Anna Nagar, Madurai</title>
+  <meta name="title" content="Syed Broilers & Mutton Stall | Fresh Chicken & Fresh Mutton | Anna Nagar, Madurai">
+  <meta name="description"
+    content="Syed Broilers & Mutton Stall - Fresh Chicken & Fresh Mutton, hygienically cut and packed in Anna Nagar, Madurai. Daily fresh tender goat meat, country chicken, broiler cuts. Call 7397471230 / 6383184080.">
+  <meta name="keywords"
+    content="Syed Broilers & Mutton Stall, fresh chicken Madurai, fresh mutton Anna Nagar, chicken stall Anna Nagar Madurai, halal mutton Madurai, hygienically cut packed meat">
+  <meta name="author" content="Syed Broilers & Mutton Stall">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="Syed Broilers & Mutton Stall - Fresh Chicken, Fresh Mutton">
+  <meta property="og:description"
+    content="Hygienically cut and packed fresh tender mutton & farm chicken in Anna Nagar, Madurai. Call 7397471230">
+  <meta property="og:image" content="assets/images/hero-meat.jpg">
+
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥩</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- INLINE CSS ENGINE: Guarantees 100% Instant Styling even when opened directly via file:/// in Chrome/Edge -->
+  <style>
+    /* ==========================================================================
+       SYED BROILERS & MUTTON STALL - DESIGN SYSTEM
+       Anna Nagar, Madurai
+       ========================================================================== */
+    :root {
+      --bg-dark: #0d0a0c;
+      --bg-card: #171115;
+      --bg-card-hover: #1f171d;
+      --bg-surface: #251b22;
+      --bg-elevated: #2f222b;
+
+      --primary-crimson: #d90429;
+      --primary-bright: #ef233c;
+      --primary-glow: rgba(239, 35, 60, 0.35);
+
+      --gold-accent: #ffb703;
+      --gold-glow: rgba(255, 183, 3, 0.25);
+      --gold-light: #ffd166;
+
+      --wa-green: #25D366;
+      --wa-green-hover: #20ba59;
+      --wa-glow: rgba(37, 211, 102, 0.3);
+
+      --text-white: #ffffff;
+      --text-primary: #f8f9fa;
+      --text-secondary: #c9b9c2;
+      --text-muted: #8d7986;
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(239, 35, 60, 0.4);
+      --border-gold: rgba(255, 183, 3, 0.35);
+
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Syne', system-ui, -apple-system, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ==========================================================================
+       LIGHT THEME SYSTEM & VARIABLES
+       ========================================================================== */
+    [data-theme="light"] {
+      --bg-dark: #f8f5f7;
+      --bg-card: #ffffff;
+      --bg-card-hover: #fcf8fa;
+      --bg-surface: #f2e9ee;
+      --bg-elevated: #e7dde3;
+
+      --primary-crimson: #c10024;
+      --primary-bright: #d90429;
+      --primary-glow: rgba(209, 0, 36, 0.2);
+
+      --gold-accent: #c47c00;
+      --gold-glow: rgba(196, 124, 0, 0.2);
+      --gold-light: #995c00;
+
+      --wa-green: #15803d;
+      --wa-green-hover: #166534;
+      --wa-glow: rgba(21, 128, 61, 0.25);
+
+      --text-white: #171115;
+      --text-primary: #1e151b;
+      --text-secondary: #574a52;
+      --text-muted: #7d6e77;
+
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-focus: rgba(209, 0, 36, 0.4);
+      --border-gold: rgba(196, 124, 0, 0.35);
+
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ==========================================================================
+       THEME TOGGLE BUTTON STYLES
+       ========================================================================== */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      user-select: none;
+      outline: none;
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--bg-elevated);
+      border-color: var(--gold-accent);
+      color: var(--gold-accent);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .theme-toggle-btn:hover .theme-toggle-icon {
+      transform: rotate(25deg);
+    }
+
+    /* Default (Dark): show Sun icon to switch to Light */
+    .icon-sun {
+      display: inline-block;
+      color: #ffd166;
+    }
+
+    .icon-moon {
+      display: none;
+      color: #7c3aed;
+    }
+
+    /* Light Mode: show Moon icon to switch to Dark */
+    [data-theme="light"] .icon-sun {
+      display: none;
+    }
+
+    [data-theme="light"] .icon-moon {
+      display: inline-block;
+      color: #7c3aed;
+    }
+
+    /* Drawer Theme Toggle Button */
+    .drawer-theme-toggle-wrap {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .drawer-theme-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .drawer-theme-toggle:hover {
+      background: var(--bg-elevated);
+      border-color: var(--gold-accent);
+    }
+
+    .d-theme-icons {
+      font-size: 1.05rem;
+    }
+
+    /* ==========================================================================
+       LIGHT THEME COMPONENT SPECIFIC OVERRIDES
+       ========================================================================== */
+    [data-theme="light"] body {
+      background-color: #f8f5f7;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(217, 4, 41, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(196, 124, 0, 0.03) 0%, transparent 40%);
+    }
+
+    [data-theme="light"] .top-ticker {
+      background: linear-gradient(90deg, #f7edf1 0%, #fff0f3 50%, #f7edf1 100%);
+      border-bottom-color: rgba(209, 0, 36, 0.15);
+    }
+
+    [data-theme="light"] .ticker-text {
+      color: #4a3c44;
+    }
+
+    [data-theme="light"] .ticker-phone {
+      color: #171115;
+    }
+
+    [data-theme="light"] .ticker-phone:hover {
+      color: #c10024;
+    }
+
+    [data-theme="light"] .site-header {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom-color: rgba(0, 0, 0, 0.07);
+    }
+
+    [data-theme="light"] .site-header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    [data-theme="light"] .shop-name,
+    [data-theme="light"] .hero-title,
+    [data-theme="light"] .section-title,
+    [data-theme="light"] .rate-name,
+    [data-theme="light"] .rate-price .amount,
+    [data-theme="light"] .card-title,
+    [data-theme="light"] .why-card h3,
+    [data-theme="light"] .cut-details h3,
+    [data-theme="light"] .info-content strong,
+    [data-theme="light"] .form-label,
+    [data-theme="light"] .summary-header h3,
+    [data-theme="light"] .total-price,
+    [data-theme="light"] .modal-header h3,
+    [data-theme="light"] .author-info strong,
+    [data-theme="light"] .hours-list li strong,
+    [data-theme="light"] .faq-question,
+    [data-theme="light"] .cta-content h2,
+    [data-theme="light"] .drawer-logo .brand-name {
+      color: #171115;
+    }
+
+    [data-theme="light"] .nav-item {
+      color: #574a52;
+    }
+
+    [data-theme="light"] .nav-item:hover {
+      color: #c10024;
+    }
+
+    [data-theme="light"] .hero-subtitle-block {
+      color: #b35900;
+      text-shadow: none;
+    }
+
+    [data-theme="light"] .highlight-item {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    [data-theme="light"] .highlight-num {
+      color: #171115;
+    }
+
+    [data-theme="light"] .floating-badge {
+      background: rgba(255, 255, 255, 0.96);
+      border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] .badge-info strong {
+      color: #171115;
+    }
+
+    [data-theme="light"] .floating-contact-card {
+      background: #ffffff;
+      border-color: rgba(196, 124, 0, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] .card-title {
+      color: #171115;
+    }
+
+    [data-theme="light"] .rates-section,
+    [data-theme="light"] .butchery-section,
+    [data-theme="light"] .testimonials-section,
+    [data-theme="light"] .faq-section {
+      background: #f3ecf0;
+      border-top-color: rgba(0, 0, 0, 0.06);
+      border-bottom-color: rgba(0, 0, 0, 0.06);
+    }
+
+    [data-theme="light"] .rate-card,
+    [data-theme="light"] .catalog-card,
+    [data-theme="light"] .why-card,
+    [data-theme="light"] .testi-card,
+    [data-theme="light"] .cut-pillar,
+    [data-theme="light"] .info-block,
+    [data-theme="light"] .map-card,
+    [data-theme="light"] .faq-item {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    [data-theme="light"] .rate-card:hover,
+    [data-theme="light"] .catalog-card:hover,
+    [data-theme="light"] .why-card:hover,
+    [data-theme="light"] .testi-card:hover,
+    [data-theme="light"] .cut-pillar:hover {
+      background: #ffffff;
+      border-color: rgba(209, 0, 36, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .testi-card.featured {
+      background: #ffffff;
+      border-color: rgba(196, 124, 0, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .rate-icon {
+      background: #f7f0f4;
+    }
+
+    [data-theme="light"] .rate-price .amount {
+      color: #171115 !important;
+    }
+
+    [data-theme="light"] .rate-price .unit {
+      color: #6c5a66;
+    }
+
+    [data-theme="light"] .rate-price {
+      border-bottom-color: rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .rate-footer-note {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      color: #4a3c44;
+    }
+
+    [data-theme="light"] .rate-footer-note strong {
+      color: #c10024;
+    }
+
+    [data-theme="light"] .estimator-section {
+      background: linear-gradient(180deg, #f7f1f4 0%, #ede5ea 100%);
+      border-top-color: rgba(0, 0, 0, 0.06);
+      border-bottom-color: rgba(0, 0, 0, 0.06);
+    }
+
+    [data-theme="light"] .estimator-wrapper {
+      background: #ffffff;
+      border-color: rgba(209, 0, 36, 0.2);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .radio-card,
+    [data-theme="light"] .prep-chip span,
+    [data-theme="light"] .mode-box,
+    [data-theme="light"] .custom-input,
+    [data-theme="light"] .modal-select,
+    [data-theme="light"] .modal-input,
+    [data-theme="light"] .btn-secondary,
+    [data-theme="light"] .btn-outline,
+    [data-theme="light"] .btn-card-order,
+    [data-theme="light"] .btn-cut-order,
+    [data-theme="light"] .tab-btn {
+      background: #f6eff3;
+      border-color: rgba(0, 0, 0, 0.08);
+      color: #171115;
+    }
+
+    [data-theme="light"] .radio-card:hover,
+    [data-theme="light"] .prep-chip:hover span,
+    [data-theme="light"] .mode-label:hover .mode-box,
+    [data-theme="light"] .btn-secondary:hover,
+    [data-theme="light"] .tab-btn:hover {
+      background: #ede3ea;
+      color: #171115;
+    }
+
+    [data-theme="light"] .radio-name,
+    [data-theme="light"] .mode-box strong {
+      color: #171115;
+    }
+
+    [data-theme="light"] .estimator-summary-card {
+      background: #fdfafc;
+      border-color: rgba(196, 124, 0, 0.35);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    [data-theme="light"] .summary-total-box {
+      background: #f0e7ec;
+    }
+
+    [data-theme="light"] .sum-val {
+      color: #171115;
+    }
+
+    [data-theme="light"] .mobile-sticky-bar {
+      background: rgba(255, 255, 255, 0.96);
+      border-top-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    [data-theme="light"] .sticky-action.call-action {
+      background: #f3ecf0;
+      color: #171115;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .cta-banner-card {
+      background: linear-gradient(135deg, #fcedf1 0%, #ffffff 50%, #faedf1 100%);
+      border-color: rgba(209, 0, 36, 0.3);
+      box-shadow: 0 16px 40px rgba(209, 0, 36, 0.08);
+    }
+
+    [data-theme="light"] .modal-box {
+      background: #ffffff;
+      border-color: rgba(209, 0, 36, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    [data-theme="light"] .modal-field label {
+      color: #171115;
+    }
+
+    [data-theme="light"] .m-qty-btn {
+      background: #f4edf1;
+      color: #171115;
+    }
+
+    [data-theme="light"] .mobile-drawer {
+      background: #ffffff;
+      border-left-color: rgba(0, 0, 0, 0.08);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+    }
+
+    [data-theme="light"] .drawer-item {
+      color: #4a3c44;
+    }
+
+    [data-theme="light"] .drawer-item:hover,
+    [data-theme="light"] .drawer-item:active {
+      background: #f4edf1;
+      color: #c10024;
+    }
+
+    [data-theme="light"] .drawer-btn.call-btn {
+      background: #f4edf1;
+      color: #171115;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    [data-theme="light"] .modal-select option {
+      background: #ffffff;
+      color: #171115;
+    }
+
+    [data-theme="light"] .toast {
+      background: #ffffff;
+      border-color: var(--wa-green);
+      color: #171115;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: var(--bg-dark);
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(217, 4, 41, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(255, 183, 3, 0.05) 0%, transparent 40%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+      padding-bottom: 70px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition-fast);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Top Announcement Bar */
+    .top-ticker {
+      background: linear-gradient(90deg, #1b0c11 0%, #2e0e18 50%, #1b0c11 100%);
+      border-bottom: 1px solid rgba(239, 35, 60, 0.25);
+      font-size: 0.85rem;
+      padding: 8px 16px;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .ticker-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ticker-badge {
+      background: var(--primary-crimson);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .ticker-text {
+      color: var(--text-secondary);
+      font-weight: 500;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .ticker-contact {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ticker-phone {
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ticker-phone:hover {
+      color: var(--gold-accent);
+    }
+
+    .ticker-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(37, 211, 102, 0.12);
+      color: #25D366;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      padding: 2px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-dot.pulsing {
+      animation: pulseGreen 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulseGreen {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+      }
+
+      70% {
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13, 10, 12, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all var(--transition-fast);
+    }
+
+    .site-header.scrolled {
+      background: rgba(13, 10, 12, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .header-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 20px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      padding: 2px;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      transition: transform var(--transition-fast);
+    }
+
+    .brand-logo:hover .brand-logo-img {
+      transform: scale(1.05);
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary-crimson), #800016);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(217, 4, 41, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shop-name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .shop-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      letter-spacing: 1.2px;
+    }
+
+    .shop-badge-raw {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: clamp(14px, 1.8vw, 26px);
+      flex-wrap: nowrap;
+    }
+
+    @media (min-width: 992px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-item {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+      font-weight: 600;
+      position: relative;
+      padding: 6px 0;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-bright);
+      transition: width var(--transition-fast);
+      border-radius: 2px;
+    }
+
+    .nav-item:hover {
+      color: #fff;
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp-header {
+      background: rgba(37, 211, 102, 0.15);
+      color: #25D366;
+      border: 1px solid rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp-header:hover {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 4px 18px var(--wa-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-call-header {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .btn-call-header {
+        display: inline-flex;
+      }
+    }
+
+    .btn-call-header:hover {
+      background: var(--bg-elevated);
+      border-color: var(--primary-bright);
+      color: var(--primary-bright);
+    }
+
+    .mobile-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 85%;
+      max-width: 360px;
+      height: 100vh;
+      background: #140f13;
+      z-index: 2000;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-left: 1px solid rgba(239, 35, 60, 0.2);
+    }
+
+    .mobile-drawer.open {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      gap: 12px;
+    }
+
+    .drawer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .drawer-logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      padding: 2px;
+      border: 1.5px solid var(--border-gold);
+      flex-shrink: 0;
+    }
+
+    .drawer-logo .brand-name {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .drawer-logo .brand-loc {
+      font-size: 0.72rem;
+      color: var(--gold-accent);
+      line-height: 1.3;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .drawer-close {
+      font-size: 1.8rem;
+      color: var(--text-muted);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 24px;
+      flex: 1;
+    }
+
+    .drawer-item {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .drawer-item i {
+      color: var(--primary-bright);
+      width: 20px;
+    }
+
+    .drawer-item:hover,
+    .drawer-item:active {
+      background: var(--bg-surface);
+      color: #fff;
+    }
+
+    .drawer-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .drawer-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .drawer-btn.call-btn {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .drawer-btn.wa-btn {
+      background: var(--wa-green);
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      padding: 60px 0 80px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 992px) {
+      .hero-section {
+        padding: 80px 0 100px;
+      }
+    }
+
+    .hero-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 60% 40%, rgba(217, 4, 41, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -100px;
+      left: 10%;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(255, 183, 3, 0.08) 0%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 60px;
+      }
+    }
+
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(239, 35, 60, 0.12);
+      border: 1px solid rgba(239, 35, 60, 0.3);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-bright);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 3.2rem;
+      }
+    }
+
+    .highlight-text {
+      background: linear-gradient(135deg, #ff4d6d, #ffb703);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-subtitle-block {
+      display: block;
+      font-size: 0.55em;
+      letter-spacing: 0.5px;
+      color: var(--gold-light);
+      font-weight: 700;
+      margin-top: 10px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 576px) {
+      .hero-highlights {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .highlight-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .highlight-num {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .highlight-lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-crimson) 0%, #a7001c 100%);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 20px var(--primary-glow);
+      padding: 14px 28px;
+      font-size: 0.98rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--primary-bright) 0%, #c90022 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(239, 35, 60, 0.5);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 14px 24px;
+      font-size: 0.98rem;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-elevated);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 22px;
+      font-size: 0.98rem;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold-accent);
+      color: #fff;
+    }
+
+    .hero-location-hint {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .hero-location-hint i {
+      color: var(--primary-bright);
+    }
+
+    /* Hero Visual Card Wrap */
+    .visual-card-wrap {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid rgba(239, 35, 60, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(217, 4, 41, 0.2);
+    }
+
+    .hero-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image-frame:hover .hero-img {
+      transform: scale(1.03);
+    }
+
+    .img-gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(13, 10, 12, 0.8) 0%, transparent 100%);
+    }
+
+    /* Floating Badges */
+    .floating-badge {
+      position: absolute;
+      background: rgba(23, 17, 21, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      animation: floatAnim 4s ease-in-out infinite alternate;
+    }
+
+    .badge-top-right {
+      top: -12px;
+      right: -12px;
+    }
+
+    .badge-bottom-left {
+      bottom: 75px;
+      left: -12px;
+      animation-delay: 2s;
+    }
+
+    @media (max-width: 640px) {
+      .badge-top-right {
+        top: 10px;
+        right: 10px;
+      }
+
+      .badge-bottom-left {
+        bottom: 65px;
+        left: 10px;
+      }
+    }
+
+    @keyframes floatAnim {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .badge-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(239, 35, 60, 0.2);
+      color: var(--primary-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .badge-icon-box.gold {
+      background: rgba(255, 183, 3, 0.2);
+      color: var(--gold-accent);
+    }
+
+    .badge-info strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .badge-info span {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .floating-contact-card {
+      position: absolute;
+      bottom: -20px;
+      left: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #25161c 0%, #171014 100%);
+      border: 1px solid rgba(255, 183, 3, 0.4);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+      z-index: 3;
+    }
+
+    .card-avatar {
+      font-size: 1.6rem;
+    }
+
+    .card-details {
+      flex: 1;
+    }
+
+    .card-title {
+      display: block;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #fff;
+    }
+
+    .card-sub {
+      font-size: 0.75rem;
+      color: var(--gold-accent);
+    }
+
+    .card-action {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--gold-accent);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: transform var(--transition-fast);
+    }
+
+    .card-action:hover {
+      transform: scale(1.1);
+    }
+
+    /* Common Section */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-header.text-center {
+      text-align: center;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary-bright);
+      background: rgba(239, 35, 60, 0.1);
+      border: 1px solid rgba(239, 35, 60, 0.25);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Daily Rate Board */
+    .rates-section {
+      background: #110d10;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .rate-updated-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--gold-accent);
+      background: rgba(255, 183, 3, 0.1);
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 183, 3, 0.25);
+    }
+
+    .rates-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .rates-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .rates-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .rate-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .rate-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(239, 35, 60, 0.4);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rate-card.featured-rate {
+      border-color: rgba(239, 35, 60, 0.5);
+      box-shadow: 0 6px 24px rgba(217, 4, 41, 0.15);
+    }
+
+    .rate-card.border-gold {
+      border-color: rgba(255, 183, 3, 0.45);
+    }
+
+    .rate-tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--primary-crimson);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.5px;
+    }
+
+    .rate-tag.gold {
+      background: var(--gold-accent);
+      color: #000;
+    }
+
+    .rate-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: var(--primary-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .rate-card.border-gold .rate-icon {
+      color: var(--gold-accent);
+    }
+
+    .rate-name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .rate-tamil {
+      font-size: 0.85rem;
+      color: var(--gold-accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .rate-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .rate-price .currency {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-bright);
+    }
+
+    .rate-price .amount {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-white, #fff);
+      line-height: 1;
+    }
+
+    .rate-price .unit {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .rate-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .rate-specs li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rate-specs li i {
+      color: var(--wa-green);
+      font-size: 0.78rem;
+      flex-shrink: 0;
+    }
+
+    .btn-card-order {
+      width: 100%;
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-card-order i {
+      color: var(--wa-green);
+      font-size: 1.1rem;
+    }
+
+    .btn-card-order:hover {
+      background: var(--wa-green);
+      border-color: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--wa-glow);
+    }
+
+    .btn-card-order:hover i {
+      color: #fff;
+    }
+
+    .rate-footer-note {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .rate-footer-note strong {
+      color: var(--gold-accent);
+    }
+
+    /* Cuts Filter & Grid */
+    .filter-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .tab-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all var(--transition-fast);
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-elevated);
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: var(--primary-crimson);
+      color: #fff;
+      border-color: var(--primary-bright);
+      box-shadow: 0 4px 15px var(--primary-glow);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .catalog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .catalog-card:hover {
+      border-color: rgba(239, 35, 60, 0.4);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .catalog-card:hover .card-media img {
+      transform: scale(1.05);
+    }
+
+    .badge-dish {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(13, 10, 12, 0.85);
+      backdrop-filter: blur(6px);
+      color: var(--gold-accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 183, 3, 0.3);
+    }
+
+    .badge-halal {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(37, 211, 102, 0.9);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .card-price {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--primary-bright);
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .card-tamil-title {
+      font-size: 0.82rem;
+      color: var(--gold-accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .feat-pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .feat-pill i {
+      color: var(--primary-bright);
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-cut-order {
+      flex: 1;
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 10px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-cut-order:hover {
+      background: var(--primary-crimson);
+      border-color: var(--primary-bright);
+      box-shadow: 0 4px 15px var(--primary-glow);
+    }
+
+    .btn-cut-wa {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: var(--wa-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-cut-wa:hover {
+      background: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--wa-glow);
+    }
+
+    /* Estimator Section */
+    .estimator-section {
+      background: linear-gradient(180deg, #120e11 0%, #1a1318 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .estimator-wrapper {
+      background: rgba(23, 17, 21, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(239, 35, 60, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 32px 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    @media (min-width: 768px) {
+      .estimator-wrapper {
+        padding: 48px 40px;
+      }
+    }
+
+    .estimator-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .estimator-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    @media (min-width: 992px) {
+      .estimator-grid {
+        grid-template-columns: 1.25fr 0.85fr;
+        gap: 40px;
+        align-items: start;
+      }
+    }
+
+    .estimator-form {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-label i {
+      color: var(--primary-bright);
+    }
+
+    .cut-radio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 576px) {
+      .cut-radio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .cut-radio-label {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .cut-radio-label input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-card {
+      display: block;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      transition: all var(--transition-fast);
+    }
+
+    .radio-name {
+      display: block;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .radio-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .cut-radio-label:hover .radio-card {
+      background: var(--bg-elevated);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .cut-radio-label input:checked+.radio-card,
+    .cut-radio-label.active .radio-card {
+      background: rgba(217, 4, 41, 0.15);
+      border-color: var(--primary-bright);
+      box-shadow: 0 4px 15px rgba(217, 4, 41, 0.2);
+    }
+
+    .cut-radio-label input:checked+.radio-card .radio-sub,
+    .cut-radio-label.active .radio-card .radio-sub {
+      color: var(--gold-accent);
+    }
+
+    .weight-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .weight-display {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--gold-accent);
+      background: rgba(255, 183, 3, 0.1);
+      padding: 2px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 183, 3, 0.3);
+    }
+
+    .weight-quick-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .weight-pill {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all var(--transition-fast);
+    }
+
+    .weight-pill:hover {
+      background: var(--bg-elevated);
+      color: #fff;
+    }
+
+    .weight-pill.active {
+      background: var(--gold-accent);
+      color: #000;
+      border-color: var(--gold-accent);
+      box-shadow: 0 4px 12px var(--gold-glow);
+    }
+
+    .slider-wrap {
+      margin-top: 6px;
+    }
+
+    .custom-range {
+      width: 100%;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: var(--bg-elevated);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--primary-bright);
+      box-shadow: 0 0 12px var(--primary-glow);
+      cursor: pointer;
+      border: 2px solid #fff;
+    }
+
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .prep-chips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @media (min-width: 576px) {
+      .prep-chips-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .prep-chip {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .prep-chip input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .prep-chip span {
+      display: block;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .prep-chip:hover span {
+      background: var(--bg-elevated);
+      color: #fff;
+    }
+
+    .prep-chip input:checked+span {
+      background: rgba(239, 35, 60, 0.2);
+      border-color: var(--primary-bright);
+      color: #fff;
+    }
+
+    .order-mode-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .mode-label {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .mode-label input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mode-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      gap: 4px;
+      transition: all var(--transition-fast);
+    }
+
+    .mode-box i {
+      font-size: 1.3rem;
+      color: var(--primary-bright);
+      margin-bottom: 2px;
+    }
+
+    .mode-box strong {
+      font-size: 0.92rem;
+      color: #fff;
+    }
+
+    .mode-box small {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .mode-label:hover .mode-box {
+      background: var(--bg-elevated);
+    }
+
+    .mode-label input:checked+.mode-box,
+    .mode-label.active .mode-box {
+      background: rgba(37, 211, 102, 0.12);
+      border-color: var(--wa-green);
+    }
+
+    .mode-label input:checked+.mode-box i,
+    .mode-label.active .mode-box i {
+      color: var(--wa-green);
+    }
+
+    .custom-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color var(--transition-fast);
+    }
+
+    .custom-input:focus {
+      border-color: var(--primary-bright);
+    }
+
+    /* Estimator Summary Card */
+    .estimator-summary-card {
+      background: linear-gradient(135deg, #22161e 0%, #181116 100%);
+      border: 1px solid rgba(255, 183, 3, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 90px;
+    }
+
+    .summary-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .summary-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    .summary-stall-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      background: rgba(255, 183, 3, 0.12);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .summary-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .sum-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+    }
+
+    .sum-lbl {
+      color: var(--text-muted);
+    }
+
+    .sum-val {
+      color: #fff;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .sum-val.highlight {
+      color: var(--gold-accent);
+    }
+
+    .summary-divider {
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 16px 0;
+    }
+
+    .summary-total-box {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .total-text {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .total-amount-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .total-currency {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-bright);
+    }
+
+    .total-price {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .total-disclaimer {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .summary-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-summary-wa {
+      background: var(--wa-green);
+      color: #fff;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+      box-shadow: 0 4px 18px var(--wa-glow);
+    }
+
+    .btn-summary-wa:hover {
+      background: var(--wa-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-summary-call {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-summary-call:hover {
+      background: var(--bg-elevated);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .summary-trust-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .summary-trust-bullets i {
+      color: var(--wa-green);
+      margin-right: 6px;
+    }
+
+    /* Master Butchery Section */
+    .butchery-section {
+      background: #110d10;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .butchery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .butchery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+    }
+
+    .butchery-visual {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid rgba(255, 183, 3, 0.35);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
+    }
+
+    .butchery-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .butchery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(13, 10, 12, 0.95) 0%, rgba(13, 10, 12, 0.6) 80%, transparent 100%);
+      padding: 24px 20px 16px;
+    }
+
+    .butchery-caption strong {
+      display: block;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .butchery-caption span {
+      font-size: 0.8rem;
+      color: var(--gold-accent);
+    }
+
+    .butchery-info {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .cut-pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all var(--transition-fast);
+    }
+
+    .cut-pillar:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(239, 35, 60, 0.3);
+      transform: translateX(4px);
+    }
+
+    .cut-num {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-bright);
+      background: rgba(239, 35, 60, 0.1);
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cut-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .cut-details p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Why Section */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .why-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .why-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 183, 3, 0.35);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .why-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-md);
+      background: rgba(239, 35, 60, 0.12);
+      color: var(--primary-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: transform var(--transition-fast);
+    }
+
+    .why-card:hover .why-icon-box {
+      transform: scale(1.1);
+      background: var(--primary-crimson);
+      color: #fff;
+    }
+
+    .why-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: #110d10;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .testi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all var(--transition-fast);
+    }
+
+    .testi-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .testi-card.featured {
+      border-color: rgba(255, 183, 3, 0.4);
+      background: linear-gradient(135deg, #1e151b 0%, #171115 100%);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .testi-rating {
+      color: var(--gold-accent);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .testi-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary-crimson);
+      color: #fff;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .author-info span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Location Section */
+    .location-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .location-wrapper {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 60px;
+      }
+    }
+
+    .location-intro {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .info-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(239, 35, 60, 0.15);
+      color: var(--primary-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-content strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .info-content p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .phone-highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .phone-highlight a {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary-bright);
+    }
+
+    .phone-highlight a:hover {
+      color: var(--gold-accent);
+    }
+
+    .hours-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .hours-list li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hours-list li strong {
+      color: #fff;
+    }
+
+    .tip-text {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.76rem;
+      color: var(--gold-accent);
+    }
+
+    .location-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .map-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(239, 35, 60, 0.3);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .map-header {
+      padding: 16px 20px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .map-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .map-pin-icon {
+      color: var(--primary-bright);
+      font-size: 1.4rem;
+    }
+
+    .map-title-row strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .map-title-row small {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .map-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--wa-green);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    .map-embed-container {
+      width: 100%;
+      height: 340px;
+      background: #000;
+    }
+
+    .map-footer-details {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--bg-card);
+    }
+
+    .map-quick-tag {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .map-quick-tag i {
+      color: var(--gold-accent);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: #110d10;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+
+    .faq-item.active {
+      border-color: rgba(239, 35, 60, 0.35);
+      background: var(--bg-card-hover);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #fff;
+      gap: 16px;
+    }
+
+    .faq-question i {
+      color: var(--primary-bright);
+      transition: transform var(--transition-fast);
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer p {
+      padding: 0 22px 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .faq-answer strong {
+      color: #fff;
+    }
+
+    /* CTA Banner */
+    .cta-banner-section {
+      padding: 80px 0;
+    }
+
+    .cta-banner-card {
+      position: relative;
+      background: linear-gradient(135deg, #300812 0%, #18090f 50%, #200d14 100%);
+      border: 1px solid rgba(239, 35, 60, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 50px 24px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(217, 4, 41, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .cta-banner-card {
+        padding: 70px 40px;
+      }
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(239, 35, 60, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 183, 3, 0.15);
+      border: 1px solid rgba(255, 183, 3, 0.4);
+      color: var(--gold-accent);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .cta-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .cta-content h2 {
+        font-size: 2.8rem;
+      }
+    }
+
+    .cta-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-whatsapp-lg {
+      background: var(--wa-green);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 24px var(--wa-glow);
+      transition: all var(--transition-fast);
+    }
+
+    .btn-whatsapp-lg:hover {
+      background: var(--wa-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-call-lg {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 16px 30px;
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-call-lg:hover {
+      background: var(--bg-elevated);
+      border-color: var(--primary-bright);
+      color: var(--primary-bright);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #090709;
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1.4fr 0.8fr 0.9fr 1.2fr;
+      }
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .footer-logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      padding: 2px;
+      border: 1.5px solid var(--border-gold);
+      flex-shrink: 0;
+    }
+
+    .footer-logo i {
+      color: var(--primary-bright);
+    }
+
+    .footer-tagline {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .f-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      background: rgba(255, 183, 3, 0.1);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .footer-heading {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links li a {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links li a:hover {
+      color: var(--primary-bright);
+      padding-left: 4px;
+    }
+
+    .footer-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-contact-info i {
+      color: var(--primary-bright);
+      margin-right: 6px;
+    }
+
+    .footer-contact-info a {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .footer-bottom-links {
+      color: var(--gold-accent);
+      font-weight: 600;
+    }
+
+    /* Mobile Bottom Sticky Bar */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      background: rgba(18, 14, 17, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border-subtle);
+      padding: 8px 12px;
+      gap: 10px;
+    }
+
+    @media (min-width: 992px) {
+      .mobile-sticky-bar {
+        display: none;
+      }
+    }
+
+    .sticky-action {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .sticky-action.call-action {
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .sticky-action.wa-action {
+      background: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--wa-glow);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: #191217;
+      border: 1px solid rgba(239, 35, 60, 0.4);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 480px;
+      padding: 28px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.open .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 1.6rem;
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all var(--transition-fast);
+    }
+
+    .modal-close:hover {
+      color: #fff;
+      background: var(--bg-surface);
+    }
+
+    .modal-header {
+      margin-bottom: 20px;
+    }
+
+    .modal-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      letter-spacing: 0.5px;
+    }
+
+    .modal-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: #fff;
+    }
+
+    .modal-price-tag {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+    }
+
+    .modal-price-tag span {
+      font-weight: 800;
+      color: var(--primary-bright);
+    }
+
+    .modal-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .modal-field label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .modal-qty-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .m-qty-btn {
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all var(--transition-fast);
+    }
+
+    .m-qty-btn:hover {
+      background: var(--bg-elevated);
+      color: #fff;
+    }
+
+    .m-qty-btn.active {
+      background: var(--gold-accent);
+      color: #000;
+      border-color: var(--gold-accent);
+    }
+
+    .modal-select,
+    .modal-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 0.88rem;
+      outline: none;
+    }
+
+    .modal-select:focus,
+    .modal-input:focus {
+      border-color: var(--primary-bright);
+    }
+
+    .modal-select option {
+      background: #191217;
+      color: #fff;
+    }
+
+    .modal-total-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 20px;
+    }
+
+    .modal-total-line span {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .modal-total-line strong {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--gold-accent);
+    }
+
+    .btn-modal-send {
+      width: 100%;
+      background: var(--wa-green);
+      color: #fff;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px var(--wa-glow);
+      transition: all var(--transition-fast);
+    }
+
+    .btn-modal-send:hover {
+      background: var(--wa-green-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e151b;
+      border: 1px solid var(--wa-green);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      z-index: 4000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast i {
+      color: var(--wa-green);
+    }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVENESS & UNIVERSAL DEVICE ALIGNMENT SYSTEM
+       Fits all mobile frames: iPhone SE, iPhone 12-16 Pro/Max, Samsung, Pixel
+       ========================================================================== */
+    html,
+    body {
+      max-width: 100vw;
+      overflow-x: hidden !important;
+      position: relative;
+    }
+
+    /* Prevent iOS auto-zoom on input focus */
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+
+    @media (max-width: 768px) {
+
+      /* General layout */
+      body {
+        padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .section {
+        padding: 45px 0;
+      }
+
+      .container {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .section-header.text-center {
+        margin-bottom: 26px;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+        line-height: 1.25;
+      }
+
+      .section-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+
+      .hero-pill-badge {
+        max-width: 100%;
+        font-size: 0.74rem;
+        padding: 5px 12px;
+        line-height: 1.35;
+      }
+
+      .rate-updated-pill {
+        max-width: 100%;
+        font-size: 0.76rem;
+        line-height: 1.3;
+        padding: 4px 10px;
+      }
+
+      .map-embed-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* Hero Mobile Alignment */
+      .hero-section {
+        padding: 28px 0 45px;
+      }
+
+      .hero-container {
+        gap: 28px;
+        padding: 0 14px;
+      }
+
+      .hero-title {
+        font-size: 1.95rem;
+        line-height: 1.2;
+        margin-bottom: 14px;
+      }
+
+      .hero-subtitle-block {
+        font-size: 0.58em;
+        margin-top: 6px;
+      }
+
+      .hero-description {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        margin-bottom: 20px;
+      }
+
+      .hero-highlights {
+        gap: 8px;
+        margin-bottom: 22px;
+      }
+
+      .highlight-item {
+        padding: 8px 6px;
+      }
+
+      .highlight-num {
+        font-size: 1.15rem;
+      }
+
+      .highlight-lbl {
+        font-size: 0.65rem;
+      }
+
+      .hero-cta-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 18px;
+      }
+
+      .hero-cta-group #heroOrderWhatsapp,
+      .hero-cta-group #heroEstimateLink {
+        grid-column: 1 / -1;
+        width: 100%;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 0.85rem;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-location-hint {
+        font-size: 0.8rem;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .visual-card-wrap {
+        margin: 10px auto 35px;
+        max-width: 100%;
+      }
+
+      .floating-badge {
+        padding: 6px 10px;
+        gap: 8px;
+      }
+
+      .badge-icon-box {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+      }
+
+      .badge-info strong {
+        font-size: 0.75rem;
+      }
+
+      .badge-info span {
+        font-size: 0.62rem;
+      }
+
+      .badge-top-right {
+        top: 6px;
+        right: 6px;
+      }
+
+      .badge-bottom-left {
+        bottom: 55px;
+        left: 6px;
+      }
+
+      .floating-contact-card {
+        bottom: -16px;
+        left: 8px;
+        right: 8px;
+        padding: 10px 12px;
+        gap: 10px;
+      }
+
+      .card-avatar {
+        font-size: 1.3rem;
+      }
+
+      .card-title {
+        font-size: 0.82rem;
+      }
+
+      .card-sub {
+        font-size: 0.7rem;
+      }
+
+      .card-action {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+      }
+
+      /* Rates Grid Mobile */
+      .rates-grid {
+        gap: 14px;
+      }
+
+      .rate-card {
+        padding: 18px 16px;
+      }
+
+      .rate-name {
+        font-size: 1.15rem;
+      }
+
+      .rate-price .amount {
+        font-size: 1.95rem;
+      }
+
+      .rate-specs {
+        margin-bottom: 16px;
+        gap: 6px;
+      }
+
+      .rate-specs li {
+        font-size: 0.82rem;
+      }
+
+      .rate-footer-note {
+        margin-top: 20px;
+        padding: 12px 14px;
+        font-size: 0.82rem;
+      }
+
+      /* Catalog Tabs & Cards */
+      .filter-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 4px 14px 10px;
+        margin-left: -14px;
+        margin-right: -14px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .filter-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 7px 15px;
+        font-size: 0.82rem;
+      }
+
+      .catalog-grid {
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .card-body {
+        padding: 16px 14px;
+      }
+
+      .card-title {
+        font-size: 1.05rem;
+      }
+
+      .card-price {
+        font-size: 1.05rem;
+      }
+
+      .card-desc {
+        font-size: 0.84rem;
+        margin-bottom: 12px;
+      }
+
+      .card-features {
+        gap: 4px;
+        margin-bottom: 14px;
+      }
+
+      .feat-pill {
+        font-size: 0.68rem;
+        padding: 2px 6px;
+      }
+
+      .btn-cut-order {
+        padding: 10px 8px;
+        font-size: 0.82rem;
+      }
+
+      .btn-cut-wa {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+      }
+
+      /* Order Estimator Mobile Alignment */
+      .estimator-wrapper {
+        padding: 20px 14px;
+        border-radius: var(--radius-md);
+      }
+
+      .estimator-header {
+        margin-bottom: 22px;
+      }
+
+      .estimator-grid {
+        gap: 24px;
+      }
+
+      .form-group {
+        gap: 8px;
+      }
+
+      .form-label {
+        font-size: 0.88rem;
+      }
+
+      .cut-radio-grid {
+        gap: 8px;
+      }
+
+      .radio-card {
+        padding: 10px 12px;
+      }
+
+      .radio-name {
+        font-size: 0.88rem;
+      }
+
+      .radio-sub {
+        font-size: 0.75rem;
+      }
+
+      .weight-display {
+        font-size: 1.15rem;
+        padding: 2px 10px;
+      }
+
+      .weight-quick-pills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+      }
+
+      .weight-pill {
+        padding: 7px 4px;
+        font-size: 0.78rem;
+        text-align: center;
+        border-radius: var(--radius-sm);
+      }
+
+      .prep-chips-grid {
+        gap: 6px;
+      }
+
+      .prep-chip span {
+        padding: 8px 6px;
+        font-size: 0.75rem;
+        border-radius: var(--radius-sm);
+      }
+
+      .order-mode-wrap {
+        gap: 8px;
+      }
+
+      .mode-box {
+        padding: 10px 8px;
+        border-radius: var(--radius-sm);
+      }
+
+      .mode-box i {
+        font-size: 1.15rem;
+      }
+
+      .mode-box strong {
+        font-size: 0.82rem;
+      }
+
+      .mode-box small {
+        font-size: 0.68rem;
+      }
+
+      .custom-input {
+        padding: 10px 12px;
+        font-size: 0.88rem;
+      }
+
+      .estimator-summary-card {
+        padding: 18px 14px;
+        border-radius: var(--radius-md);
+        position: static;
+      }
+
+      .summary-header {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+      }
+
+      .summary-header h3 {
+        font-size: 1.1rem;
+      }
+
+      .sum-line {
+        font-size: 0.84rem;
+      }
+
+      .total-price {
+        font-size: 2.2rem;
+      }
+
+      .btn-summary-wa {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+      }
+
+      .btn-summary-call {
+        padding: 10px 14px;
+        font-size: 0.86rem;
+      }
+
+      /* Butchery Craftsmanship */
+      .butchery-grid {
+        gap: 22px;
+      }
+
+      .cut-pillar {
+        padding: 14px;
+        gap: 12px;
+      }
+
+      .cut-num {
+        width: 36px;
+        height: 36px;
+        font-size: 1.15rem;
+      }
+
+      .cut-details h3 {
+        font-size: 0.96rem;
+      }
+
+      .cut-details p {
+        font-size: 0.82rem;
+      }
+
+      /* Why Us */
+      .why-grid {
+        gap: 14px;
+      }
+
+      .why-card {
+        padding: 20px 16px;
+        border-radius: var(--radius-md);
+      }
+
+      .why-icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+
+      .why-card h3 {
+        font-size: 1.05rem;
+      }
+
+      .why-card p {
+        font-size: 0.84rem;
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        gap: 14px;
+      }
+
+      .testi-card {
+        padding: 18px 16px;
+        border-radius: var(--radius-md);
+      }
+
+      .testi-text {
+        font-size: 0.85rem;
+        margin-bottom: 14px;
+      }
+
+      /* Location & Map */
+      .location-wrapper {
+        gap: 24px;
+      }
+
+      .location-intro {
+        font-size: 0.88rem;
+        margin-bottom: 18px;
+      }
+
+      .info-blocks {
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .info-block {
+        padding: 12px 14px;
+        gap: 12px;
+      }
+
+      .info-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+      }
+
+      .info-content strong {
+        font-size: 0.88rem;
+      }
+
+      .info-content p {
+        font-size: 0.82rem;
+      }
+
+      .phone-highlight a {
+        font-size: 1.1rem;
+      }
+
+      .hours-list li {
+        font-size: 0.8rem;
+      }
+
+      .location-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .location-cta-group .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+      }
+
+      .map-card {
+        border-radius: var(--radius-md);
+      }
+
+      .map-embed-container {
+        height: 250px;
+      }
+
+      .map-header,
+      .map-footer-details {
+        padding: 12px 14px;
+      }
+
+      /* FAQ */
+      .faq-question {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+      }
+
+      .faq-answer p {
+        padding: 0 16px 14px;
+        font-size: 0.84rem;
+      }
+
+      /* CTA Banner */
+      .cta-banner-section {
+        padding: 35px 0;
+      }
+
+      .cta-banner-card {
+        padding: 30px 16px;
+        border-radius: var(--radius-md);
+      }
+
+      .cta-content h2 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+      }
+
+      .cta-content p {
+        font-size: 0.88rem;
+        margin-bottom: 20px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .btn-whatsapp-lg,
+      .btn-call-lg {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 16px;
+        font-size: 0.92rem;
+      }
+
+      /* Footer */
+      .site-footer {
+        padding: 40px 0 20px;
+      }
+
+      .footer-grid {
+        gap: 26px;
+        margin-bottom: 28px;
+      }
+
+      .footer-heading {
+        font-size: 0.98rem;
+        margin-bottom: 12px;
+      }
+
+      .footer-bottom {
+        font-size: 0.76rem;
+        gap: 8px;
+      }
+
+      /* Quick Order Modal */
+      .modal-overlay {
+        padding: 14px;
+      }
+
+      .modal-box {
+        padding: 20px 16px;
+        border-radius: var(--radius-md);
+      }
+
+      .modal-header h3 {
+        font-size: 1.15rem;
+      }
+
+      .modal-qty-buttons {
+        gap: 6px;
+      }
+
+      .m-qty-btn {
+        padding: 7px 4px;
+        font-size: 0.78rem;
+      }
+
+      .btn-modal-send {
+        padding: 12px;
+        font-size: 0.92rem;
+      }
+
+      .modal-total-line strong {
+        font-size: 1.4rem;
+      }
+
+      /* Mobile Sticky Bar iOS Safe Area Support */
+      .mobile-sticky-bar {
+        padding: 8px 10px;
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+        gap: 8px;
+      }
+
+      .sticky-action {
+        padding: 11px 10px;
+        font-size: 0.84rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      /* Top Ticker */
+      .top-ticker {
+        padding: 8px 12px;
+      }
+
+      .ticker-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+      }
+
+      .ticker-text {
+        min-width: 0;
+        font-size: 0.76rem;
+        line-height: 1.35;
+      }
+
+      .ticker-contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 0.78rem;
+      }
+
+      /* Header */
+      .header-container {
+        padding: 10px 14px;
+        gap: 10px;
+      }
+
+      .brand-logo-img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        border-radius: var(--radius-sm);
+      }
+
+      .shop-name {
+        font-size: 1.05rem;
+      }
+
+      .shop-sub {
+        font-size: 0.65rem;
+      }
+
+      .shop-badge-raw {
+        display: none;
+      }
+
+      .header-actions {
+        gap: 8px;
+      }
+
+      .theme-toggle-btn .theme-text {
+        display: none;
+      }
+
+      .theme-toggle-btn {
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        border-radius: var(--radius-sm);
+      }
+
+      .btn-whatsapp-header {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+
+      .mobile-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .btn-whatsapp-header span {
+        display: none;
+      }
+
+      .btn-whatsapp-header {
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+      }
+
+      .header-container {
+        padding: 8px 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero-title {
+        font-size: 1.65rem;
+      }
+
+      .hero-cta-group {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta-group #heroDirectCall,
+      .hero-cta-group #heroDirectCallAlt {
+        grid-column: 1 / -1;
+      }
+
+      .weight-quick-pills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-ticker" id="topTicker">
+    <div class="ticker-inner">
+      <span class="ticker-badge"><i class="fa-solid fa-certificate"></i> 100% HALAL FRESH RAW MEAT</span>
+      <span class="ticker-text"> Anna Nagar, Madurai</span>
+      <div class="ticker-contact">
+        <a href="tel:7397471230" class="ticker-phone"><i class="fa-solid fa-phone-volume"></i> 7397471230</a>
+
+        <span class="ticker-status" id="liveStatusBadge">
+          <span class="status-dot pulsing"></span> <span id="liveStatusText">OPEN NOW</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="Syed Broilers & Mutton Stall Home">
+        <img
+          src="../../.gemini/antigravity-ide/brain/0de3ed73-c049-4ff8-ad76-60bf8a2cb155/.user_uploaded/media_1792169016334.png"
+          alt="Syed Broilers & Mutton Stall Logo" class="brand-logo-img"
+          onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+        <div class="logo-text">
+          <span class="shop-name">SYED</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#cuts" class="nav-item">Fresh Cuts</a>
+        <a href="#rates" class="nav-item">Today's Rates</a>
+        <a href="#estimator" class="nav-item">Custom Order</a>
+        <a href="#butchery" class="nav-item">Hygiene Standards</a>
+        <a href="#why-us" class="nav-item">Why Choose Us</a>
+        <a href="#location" class="nav-item">Stall Location</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Switch -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Light and Dark Mode"
+          title="Switch Theme">
+          <span class="theme-toggle-icon">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </span>
+          <span class="theme-text" id="themeText">Light</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <img
+          src="../../.gemini/antigravity-ide/brain/0de3ed73-c049-4ff8-ad76-60bf8a2cb155/.user_uploaded/media_1792169016334.png"
+          alt="Syed Broilers & Mutton Stall Logo" class="drawer-logo-img"
+          onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+        <div>
+          <span class="brand-name">SYED BROILERS & MUTTON STALL</span>
+          <span class="brand-loc">Fresh Chicken, Fresh Mutton • Hygienically Cut & Packed • Anna Nagar, Madurai</span>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="#cuts" class="drawer-item"><i class="fa-solid fa-drumstick-bite"></i> Fresh Raw Meat Cuts</a>
+      <a href="#rates" class="drawer-item"><i class="fa-solid fa-tags"></i> Daily Meat Rate Board</a>
+      <a href="#estimator" class="drawer-item"><i class="fa-solid fa-calculator"></i> Custom Weight & Cut Estimator</a>
+      <a href="#butchery" class="drawer-item"><i class="fa-solid fa-scissors"></i> Master Butchery Cuts</a>
+      <a href="#why-us" class="drawer-item"><i class="fa-solid fa-award"></i> The Syed Hygiene Promise</a>
+      <a href="#location" class="drawer-item"><i class="fa-solid fa-location-dot"></i> Stall Address & Timings</a>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-theme-toggle-wrap">
+        <button class="drawer-theme-toggle" id="drawerThemeToggleBtn" type="button">
+          <span class="d-theme-icons">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </span>
+          <span id="drawerThemeText">Switch to Light Mode</span>
+        </button>
+      </div>
+      <a href="tel:7397471230" class="drawer-btn call-btn"><i class="fa-solid fa-phone"></i> Call: 7397471230</a>
+      <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall" target="_blank"
+        class="drawer-btn wa-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-pill-badge">
+            <span class="badge-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <span>20% offer for the new customer</span>
+          </div>
+
+          <h1 class="hero-title">
+            Fresh Chicken, <span class="highlight-text">Fresh Mutton</span>
+            <span class="hero-subtitle-block"><i class="fa-solid fa-shield-halved"></i> Hygienically Cut and
+              Packed</span>
+          </h1>
+
+          <p class="hero-description">
+            Madurai’s favorite neighborhood butcher for <strong>farm-fresh tender broiler chicken, authentic country
+              chicken (நாட்டுக்கோழி), and fresh young goat mutton</strong>. Cut live with sanitized cleavers, weighed
+            honestly, and hygienically packed for your kitchen.
+          </p>
+
+          <!-- Core Butcher Highlights -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">Fresh</span>
+              <span class="highlight-lbl">Chicken & Mutton</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">100%</span>
+              <span class="highlight-lbl">Hygienically Cut</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">0%</span>
+              <span class="highlight-lbl">Frozen / Stale</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">Clean</span>
+              <span class="highlight-lbl">Packed & Sealed</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="https://wa.me/917397471230?text=Hi%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20want%20to%20order%20fresh%20meat"
+              target="_blank" class="btn btn-primary btn-glow" id="heroOrderWhatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp Pre-Order</span>
+            </a>
+            <a href="tel:7397471230" class="btn btn-secondary" id="heroDirectCall">
+              <i class="fa-solid fa-phone"></i>
+              <span>Call: 7397471230</span>
+            </a>
+            <a href="#estimator" class="btn btn-outline" id="heroEstimateLink">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Order Calculator</span>
+            </a>
+          </div>
+
+          <!-- Quick Location Hint -->
+          <div class="hero-location-hint">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Anna Nagar, Madurai, Tamil Nadu</span>
+            <a href="https://maps.app.goo.gl/wZo4ToCuJjLvqx236" target="_blank"
+              style="color: var(--gold-accent); text-decoration: underline; margin-left: 6px; font-weight: 700;">[<i
+                class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i> View on Google Maps]</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card-wrap">
+            <div class="hero-image-frame">
+              <img src="assets/images/hero-meat.jpg" alt="Syed Broilers and Mutton Stall Fresh Raw Meat Display"
+                class="hero-img" loading="eager">
+              <div class="img-gradient-overlay"></div>
+            </div>
+
+            <!-- Floating Badge 1 -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon-box"><i class="fa-solid fa-check-double"></i></div>
+              <div class="badge-info">
+                <strong>Cut Live On Order</strong>
+                <span>Never stored, cut in front of you</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon-box gold"><i class="fa-solid fa-certificate"></i></div>
+              <div class="badge-info">
+                <strong>Hygienically Packed</strong>
+                <span>Clean & Food-grade Packing</span>
+              </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="floating-contact-card">
+              <div class="card-avatar">🍗</div>
+              <div class="card-details">
+                <span class="card-title">Syed Broilers & Mutton</span>
+                <span class="card-sub">Call: 7397471230 </span>
+              </div>
+              <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall" target="_blank"
+                class="card-action" aria-label="WhatsApp Us"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE DAILY RATE BOARD -->
+    <section class="section rates-section" id="rates">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-chart-line"></i> DAILY TRANSPARENT RATES</div>
+          <h2 class="section-title">Today's Fresh Meat Rate Board</h2>
+          <p class="section-subtitle">Real daily market rates for fresh chicken and tender mutton in Anna Nagar,
+            Madurai. Weighed on certified digital scales.</p>
+          <div class="rate-updated-pill">
+            <i class="fa-regular fa-clock"></i> <span id="rateDate">Updated Today • Fresh Morning Slaughter</span>
+          </div>
+        </div>
+
+        <div class="rates-grid">
+          <!-- Rate Card 1: Tender Mutton -->
+          <div class="rate-card featured-rate">
+            <div class="rate-tag">POPULAR</div>
+            <div class="rate-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+            <h3 class="rate-name">Tender Goat Mutton</h3>
+            <p class="rate-tamil">நாட்டு ஆட்டுக்கறி (Raw Bone-in Cut)</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">850</span>
+              <span class="unit">/ 1 kg</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> Fresh young goat meat</li>
+              <li><i class="fa-solid fa-circle-check"></i> Balanced mix of shoulder, chops & ribs</li>
+              <li><i class="fa-solid fa-circle-check"></i> Includes rich bone marrow nalli</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Tender Goat Mutton (Bone-in)', 850)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+
+          <!-- Rate Card 2: Fresh Broiler Chicken -->
+          <div class="rate-card featured-rate border-gold">
+            <div class="rate-tag gold">DAILY FRESH</div>
+            <div class="rate-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+            <h3 class="rate-name">Fresh Broiler Chicken</h3>
+            <p class="rate-tamil">பண்ணை பிராய்லர் சிக்கன் (Cleaned)</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">240</span>
+              <span class="unit">/ 1 kg</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> Live healthy farm-raised birds</li>
+              <li><i class="fa-solid fa-circle-check"></i> Cleaned, skinless or with skin</li>
+              <li><i class="fa-solid fa-circle-check"></i> Tender & succulent curry pieces</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Fresh Broiler Chicken (Cleaned)', 240)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+
+          <!-- Rate Card 3: Nattu Kozhi -->
+          <div class="rate-card">
+            <div class="rate-icon"><i class="fa-solid fa-feather"></i></div>
+            <h3 class="rate-name">Original Nattu Kozhi</h3>
+            <p class="rate-tamil">நாட்டுக்கோழி (Country Chicken Cut)</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">440</span>
+              <span class="unit">/ 1 kg</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> 100% free-range village bird</li>
+              <li><i class="fa-solid fa-circle-check"></i> Earthy aroma, perfect for pepper soup</li>
+              <li><i class="fa-solid fa-circle-check"></i> Turmeric wash available</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Nattu Kozhi (Country Chicken)', 440)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+
+          <!-- Rate Card 4: Biryani Cut -->
+          <div class="rate-card">
+            <div class="rate-icon"><i class="fa-solid fa-bone"></i></div>
+            <h3 class="rate-name">Mutton Biryani Cut</h3>
+            <p class="rate-tamil">பிரியாணி ஸ்பெஷல் நள்ளி கட் (Raw)</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">880</span>
+              <span class="unit">/ 1 kg</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> Uniform 40-50g chunks with marrow bone</li>
+              <li><i class="fa-solid fa-circle-check"></i> Retains juices during dum cooking</li>
+              <li><i class="fa-solid fa-circle-check"></i> Premium tender pieces only</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Mutton Biryani Cut (with Nalli)', 880)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+
+          <!-- Rate Card 5: Boneless Mutton -->
+          <div class="rate-card">
+            <div class="rate-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+            <h3 class="rate-name">Pure Boneless Mutton</h3>
+            <p class="rate-tamil">போன்லெஸ் கறி (Pure Meat)</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">1,050</span>
+              <span class="unit">/ 1 kg</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> 100% solid tender flesh pieces</li>
+              <li><i class="fa-solid fa-circle-check"></i> Zero bone weight, ideal for Chukka</li>
+              <li><i class="fa-solid fa-circle-check"></i> Hand-trimmed clean pieces</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Pure Boneless Mutton', 1050)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+
+          <!-- Rate Card 6: Paya & Soup Bones -->
+          <div class="rate-card">
+            <div class="rate-icon"><i class="fa-solid fa-fire"></i></div>
+            <h3 class="rate-name">Aattu Kaal Paya & Ribs</h3>
+            <p class="rate-tamil">ஆட்டுக்கால் பயா & நெஞ்சு எலும்பு</p>
+            <div class="rate-price">
+              <span class="currency">₹</span>
+              <span class="amount">120</span>
+              <span class="unit">/ 4 legs set</span>
+            </div>
+            <ul class="rate-specs">
+              <li><i class="fa-solid fa-circle-check"></i> Fire-singed & scraped trotters</li>
+              <li><i class="fa-solid fa-circle-check"></i> Rich in natural gelatin & calcium</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pre-split for soup cooking</li>
+            </ul>
+            <button class="btn btn-card-order" onclick="openOrderModal('Aattu Kaal Paya (4 Legs Set)', 120)">
+              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
+            </button>
+          </div>
+        </div>
+
+        <div class="rate-footer-note">
+          <p><i class="fa-solid fa-circle-info"></i> Daily Special Items: <strong>Aattu Moolai (Brain)</strong>,
+            <strong>Eeral (Liver)</strong>, <strong>Thala Kari (Head Meat)</strong>, and <strong>Kudal (Boti)</strong>.
+            Call <strong>7397471230</strong> to reserve!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRESH RAW MEAT CATALOG -->
+    <section class="section cuts-section" id="cuts">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-knife"></i> FRESH MEAT CATALOG</div>
+          <h2 class="section-title">Fresh Chicken & Mutton Selection</h2>
+          <p class="section-subtitle">Every cut is customized to your exact dish requirements and hygienically packed.
+          </p>
+
+          <!-- Category Filters -->
+          <div class="filter-tabs" id="cutFilters">
+            <button class="tab-btn active" data-filter="all">All Cuts</button>
+            <button class="tab-btn" data-filter="chicken">Fresh Chicken & Broilers</button>
+            <button class="tab-btn" data-filter="mutton">Fresh Mutton & Goat</button>
+            <button class="tab-btn" data-filter="biryani">Biryani & Chukka Cuts</button>
+            <button class="tab-btn" data-filter="specialty">Paya & Soup Bones</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Item 1: Broiler Chicken -->
+          <div class="catalog-card" data-category="chicken biryani">
+            <div class="card-media">
+              <img src="assets/images/chicken-cuts.jpg" alt="Fresh Broiler Chicken Syed Broilers" loading="lazy">
+              <span class="badge-dish">Fresh Chicken</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Fresh Broiler Chicken (Cleaned)</h3>
+                <span class="card-price">₹240/kg</span>
+              </div>
+              <p class="card-tamil-title">பண்ணை பிராய்லர் கோழிக்கறி</p>
+              <p class="card-desc">Daily fresh poultry dressed cleanly, RO water washed, and cut into uniform pieces.
+                Choose skinless or with skin, curry size or 65 fry size.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-droplet"></i> RO Cleaned</span>
+                <span class="feat-pill"><i class="fa-solid fa-check"></i> Skinless / Skin-on</span>
+                <span class="feat-pill"><i class="fa-solid fa-shield-virus"></i> Hygienic Pack</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Fresh Farm Broiler Chicken', 240)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Fresh%20Broiler%20Chicken%20from%20Syed%20Broilers"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Biryani Cut Mutton -->
+          <div class="catalog-card" data-category="mutton biryani">
+            <div class="card-media">
+              <img src="assets/images/mutton-cuts.jpg" alt="Fresh Mutton Biryani Cut with Nalli Marrow Bone"
+                loading="lazy">
+              <span class="badge-dish">Fresh Mutton</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Mutton Biryani Cut (with Nalli)</h3>
+                <span class="card-price">₹880/kg</span>
+              </div>
+              <p class="card-tamil-title">பிரியாணி ஸ்பெஷல் நள்ளி துண்டுகள்</p>
+              <p class="card-desc">Medium-large raw meat chunks chopped from tender leg and ribs with bone marrow nalli.
+                Perfect for Seeraga Samba Dum Biryani.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-bone"></i> Nalli Bone Included</span>
+                <span class="feat-pill"><i class="fa-solid fa-check"></i> 40-50g Chunks</span>
+                <span class="feat-pill"><i class="fa-solid fa-droplet"></i> Clean Packed</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Mutton Biryani Cut (with Nalli)', 880)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Mutton%20Biryani%20Cut%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Regular Curry Cut Mutton -->
+          <div class="catalog-card" data-category="mutton">
+            <div class="card-media">
+              <img src="assets/images/hero-meat.jpg" alt="Raw Mutton Curry Cut" loading="lazy">
+              <span class="badge-dish">Curry Cut</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Fresh Mutton Curry Cut (Bone-in)</h3>
+                <span class="card-price">₹850/kg</span>
+              </div>
+              <p class="card-tamil-title">ஆட்டுக்கறி குழம்பு கட் (Bone-in Regular)</p>
+              <p class="card-desc">Evenly hand-chopped fresh bone-in pieces from shoulder, chops, and leg. Delivers rich
+                natural flavor into homemade kulambu.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-shield-halved"></i> Young Tender Goat</span>
+                <span class="feat-pill"><i class="fa-solid fa-check"></i> Fast Cooking</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Tender Goat Mutton (Bone-in)', 850)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Mutton%20Curry%20Cut%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Country Chicken -->
+          <div class="catalog-card" data-category="chicken">
+            <div class="card-media">
+              <img src="assets/images/chicken-cuts.jpg" alt="Raw Country Chicken Nattu Kozhi" loading="lazy">
+              <span class="badge-dish">Free Range</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Original Nattu Kozhi (Country Chicken)</h3>
+                <span class="card-price">₹440/kg</span>
+              </div>
+              <p class="card-tamil-title">ஒரிஜினல் நாட்டுக்கோழி கட்</p>
+              <p class="card-desc">Authentic free-range country chicken. Cleaned and chopped into your desired curry or
+                soup size. Optional turmeric wash on request.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-leaf"></i> 100% Free-Range</span>
+                <span class="feat-pill"><i class="fa-solid fa-check"></i> Pepper Soup Special</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Nattu Kozhi (Country Chicken)', 440)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Nattu%20Kozhi%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Boneless Chukka Cubes -->
+          <div class="catalog-card" data-category="mutton biryani">
+            <div class="card-media">
+              <img src="assets/images/raw-butcher-cuts.jpg" alt="Boneless Raw Mutton Chunks" loading="lazy">
+              <span class="badge-dish">Boneless Mutton</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Pure Boneless Mutton Cubes</h3>
+                <span class="card-price">₹1,050/kg</span>
+              </div>
+              <p class="card-tamil-title">போன்லெஸ் சுக்கா கறி துண்டுகள்</p>
+              <p class="card-desc">Hand-trimmed pure boneless raw mutton cubes cut from prime muscle. Zero bone, perfect
+                for preparing pepper chukka or mutton kola.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-ban"></i> Zero Bone</span>
+                <span class="feat-pill"><i class="fa-solid fa-check"></i> Hand-Diced Chunks</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Pure Boneless Mutton', 1050)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Boneless%20Mutton%20from%20Syed%20Broilers"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Paya & Soup Bones -->
+          <div class="catalog-card" data-category="specialty">
+            <div class="card-media">
+              <img src="assets/images/raw-butcher-cuts.jpg" alt="Raw Aattu Kaal Paya and Soup Rib Bones" loading="lazy">
+              <span class="badge-dish">Soup Bones</span>
+              <span class="badge-halal">100% Halal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Aattu Kaal Paya & Nenju Elumbu</h3>
+                <span class="card-price">₹120/set</span>
+              </div>
+              <p class="card-tamil-title">ஆட்டுக்கால் பயா & நெஞ்சு எலும்பு</p>
+              <p class="card-desc">Fire-singed raw goat trotters, meticulously scraped clean and chopped into joint
+                pieces for your pressure cooker soup. Rich in natural gelatin.</p>
+
+              <div class="card-features">
+                <span class="feat-pill"><i class="fa-solid fa-bone"></i> Scraped & Cleaned</span>
+                <span class="feat-pill"><i class="fa-solid fa-heart-pulse"></i> Calcium & Gelatin</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Aattu Kaal Paya (Trotters)', 120)">
+                  <i class="fa-solid fa-calculator"></i> Custom Estimate
+                </button>
+                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Aattu%20Kaal%20Paya%20from%20Syed%20Broilers"
+                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SMART ORDER ESTIMATOR & WHATSAPP BUILDER -->
+    <section class="section estimator-section" id="estimator">
+      <div class="container">
+        <div class="estimator-wrapper">
+          <div class="estimator-header">
+            <div class="section-tag"><i class="fa-solid fa-calculator"></i> ORDER CALCULATOR</div>
+            <h2 class="section-title">Configure Your Meat Order & Send via WhatsApp</h2>
+            <p class="section-subtitle">Pick your meat cut, specify your chopping style, choose weight, and send your
+              order straight to Syed Broilers & Mutton Stall (7397471230).</p>
+          </div>
+
+          <div class="estimator-grid">
+            <!-- Left Configurator Form -->
+            <div class="estimator-form">
+              <!-- Step 1: Select Meat Cut -->
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-drumstick-bite"></i> 1. Choose Fresh Meat Cut:</label>
+                <div class="cut-radio-grid" id="meatCutOptions">
+                  <label class="cut-radio-label active">
+                    <input type="radio" name="meatSelection" value="Fresh Farm Broiler Chicken" data-rate="240" checked>
+                    <span class="radio-card">
+                      <span class="radio-name">Fresh Broiler Chicken</span>
+                      <span class="radio-sub">Clean Dressed (₹240/kg)</span>
+                    </span>
+                  </label>
+
+                  <label class="cut-radio-label">
+                    <input type="radio" name="meatSelection" value="Tender Goat Mutton (Bone-in)" data-rate="850">
+                    <span class="radio-card">
+                      <span class="radio-name">Tender Goat Mutton</span>
+                      <span class="radio-sub">Bone-in (₹850/kg)</span>
+                    </span>
+                  </label>
+
+                  <label class="cut-radio-label">
+                    <input type="radio" name="meatSelection" value="Mutton Biryani Cut (with Nalli)" data-rate="880">
+                    <span class="radio-card">
+                      <span class="radio-name">Biryani Cut (with Nalli)</span>
+                      <span class="radio-sub">Large Chunks (₹880/kg)</span>
+                    </span>
+                  </label>
+
+                  <label class="cut-radio-label">
+                    <input type="radio" name="meatSelection" value="Nattu Kozhi (Country Chicken)" data-rate="440">
+                    <span class="radio-card">
+                      <span class="radio-name">Nattu Kozhi</span>
+                      <span class="radio-sub">Country Chicken (₹440/kg)</span>
+                    </span>
+                  </label>
+
+                  <label class="cut-radio-label">
+                    <input type="radio" name="meatSelection" value="Pure Boneless Mutton" data-rate="1050">
+                    <span class="radio-card">
+                      <span class="radio-name">Boneless Mutton</span>
+                      <span class="radio-sub">Solid Flesh (₹1,050/kg)</span>
+                    </span>
+                  </label>
+
+                  <label class="cut-radio-label">
+                    <input type="radio" name="meatSelection" value="Aattu Kaal Paya (Trotters)" data-rate="120"
+                      data-is-fixed="true">
+                    <span class="radio-card">
+                      <span class="radio-name">Aattu Kaal Paya</span>
+                      <span class="radio-sub">4 Trotters Set (₹120/set)</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 2: Weight Selection -->
+              <div class="form-group" id="weightGroup">
+                <div class="weight-header-row">
+                  <label class="form-label"><i class="fa-solid fa-weight-hanging"></i> 2. Select Weight /
+                    Quantity:</label>
+                  <span class="weight-display" id="weightDisplayValue">1.0 kg</span>
+                </div>
+
+                <div class="weight-quick-pills">
+                  <button type="button" class="weight-pill" data-weight="0.5">0.5 kg (½ kg)</button>
+                  <button type="button" class="weight-pill active" data-weight="1.0">1.0 kg (1 kg)</button>
+                  <button type="button" class="weight-pill" data-weight="1.5">1.5 kg</button>
+                  <button type="button" class="weight-pill" data-weight="2.0">2.0 kg</button>
+                  <button type="button" class="weight-pill" data-weight="3.0">3.0 kg</button>
+                  <button type="button" class="weight-pill" data-weight="5.0">5.0 kg (Bulk)</button>
+                </div>
+
+                <div class="slider-wrap">
+                  <input type="range" min="0.25" max="10" step="0.25" value="1.0" class="custom-range"
+                    id="weightSlider">
+                  <div class="range-labels">
+                    <span>250g</span>
+                    <span>2.5 kg</span>
+                    <span>5 kg</span>
+                    <span>10 kg (Bulk Function)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Butchery Chopping Style -->
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-scissors"></i> 3. Chopping & Packing Preference:</label>
+                <div class="prep-chips-grid">
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Medium Curry Cut" checked>
+                    <span>Medium Curry Cut</span>
+                  </label>
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Large Biryani Chunks">
+                    <span>Large Biryani Chunks</span>
+                  </label>
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Small Chukka / Fry Diced">
+                    <span>Small Chukka Diced</span>
+                  </label>
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Skinless Cleaned">
+                    <span>Skinless Cleaned</span>
+                  </label>
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Turmeric & Lemon Washed">
+                    <span>Turmeric Washed</span>
+                  </label>
+                  <label class="prep-chip">
+                    <input type="radio" name="prepStyle" value="Hygienically Double Packed">
+                    <span>Double Packed</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 4: Fulfillment Method -->
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-truck-fast"></i> 4. Order Mode:</label>
+                <div class="order-mode-wrap">
+                  <label class="mode-label active">
+                    <input type="radio" name="orderMode" value="Store Pickup at Anna Nagar Stall" checked>
+                    <span class="mode-box">
+                      <i class="fa-solid fa-store"></i>
+                      <strong>Stall Pickup</strong>
+                      <small>Keep packed & skip queue</small>
+                    </span>
+                  </label>
+                  <label class="mode-label">
+                    <input type="radio" name="orderMode" value="Home Delivery in Anna Nagar, Madurai">
+                    <span class="mode-box">
+                      <i class="fa-solid fa-motorcycle"></i>
+                      <strong>Home Delivery</strong>
+                      <small>Anna Nagar & Nearby Madurai</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Customer Name / Area -->
+              <div class="form-group">
+                <label for="customerNameInput" class="form-label"><i class="fa-solid fa-user"></i> Your Name & Area
+                  (Optional):</label>
+                <input type="text" id="customerNameInput" class="custom-input"
+                  placeholder="e.g. Karthik, Anna Nagar 80 Feet Road">
+              </div>
+            </div>
+
+            <!-- Right Summary Box -->
+            <div class="estimator-summary-card">
+              <div class="summary-header">
+                <h3>Order Estimate</h3>
+                <span class="summary-stall-badge">Syed Broilers & Mutton</span>
+              </div>
+
+              <div class="summary-lines">
+                <div class="sum-line">
+                  <span class="sum-lbl">Selected Meat:</span>
+                  <span class="sum-val" id="sumCut">Fresh Farm Broiler Chicken</span>
+                </div>
+                <div class="sum-line">
+                  <span class="sum-lbl">Net Weight:</span>
+                  <span class="sum-val" id="sumWeight">1.0 kg</span>
+                </div>
+                <div class="sum-line">
+                  <span class="sum-lbl">Chopping Style:</span>
+                  <span class="sum-val" id="sumPrep">Medium Curry Cut</span>
+                </div>
+                <div class="sum-line">
+                  <span class="sum-lbl">Order Mode:</span>
+                  <span class="sum-val" id="sumMode">Stall Pickup</span>
+                </div>
+                <div class="sum-line">
+                  <span class="sum-lbl">Shop Phone:</span>
+                  <span class="sum-val highlight">7397471230</span>
+                </div>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-total-box">
+                <div class="total-text">Estimated Price</div>
+                <div class="total-amount-row">
+                  <span class="total-currency">₹</span>
+                  <span class="total-price" id="sumTotal">240</span>
+                </div>
+                <small class="total-disclaimer">*Actual billing on digital butcher scale. 100% net weight
+                  guarantee.</small>
+              </div>
+
+              <div class="summary-actions">
+                <a href="#" class="btn btn-summary-wa" id="whatsappOrderTrigger" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+                </a>
+                <a href="tel:7397471230" class="btn btn-summary-call">
+                  <i class="fa-solid fa-phone"></i> Call Stall (7397471230)
+                </a>
+              </div>
+
+              <div class="summary-trust-bullets">
+                <div><i class="fa-solid fa-check"></i> Fresh Chicken, Fresh Mutton</div>
+                <div><i class="fa-solid fa-check"></i> Hygienically Cut and Packed</div>
+                <div><i class="fa-solid fa-check"></i> Anna Nagar, Madurai Location</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MASTER BUTCHERY CRAFTSMANSHIP -->
+    <section class="section butchery-section" id="butchery">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-scissors"></i> HYGIENIC CUTTING & PACKING</div>
+          <h2 class="section-title">Hygienically Cut and Packed For Your Home Cooking</h2>
+          <p class="section-subtitle">We believe food safety begins at the butcher block. Every piece of fresh chicken
+            and mutton is handled with pristine care.</p>
+        </div>
+
+        <div class="butchery-grid">
+          <div class="butchery-visual">
+            <img src="assets/images/raw-butcher-cuts.jpg" alt="Syed Broilers and Mutton Stall Butcher Block"
+              class="butchery-img" loading="lazy">
+            <div class="butchery-caption">
+              <strong>Syed Broilers & Mutton Stall</strong>
+              <span>Daily live cutting, sanitized cleavers & sealed hygienic packaging</span>
+            </div>
+          </div>
+
+          <div class="butchery-info">
+            <div class="cut-pillar">
+              <div class="cut-num">01</div>
+              <div class="cut-details">
+                <h3>Fresh Farm Chicken (Broiler & Nattu Kozhi)</h3>
+                <p>Cleaned thoroughly with pure water, dressed neatly, and chopped into your exact preferred curry or
+                  fry sizes. Free from chemical washes or old stock.</p>
+              </div>
+            </div>
+
+            <div class="cut-pillar">
+              <div class="cut-num">02</div>
+              <div class="cut-details">
+                <h3>Daily Morning Tender Goat Mutton</h3>
+                <p>Sourced from healthy pasture-fed native goats. Chopped into balanced bone-in curry pieces, biryani
+                  cuts with marrow nalli, or pure boneless meat.</p>
+              </div>
+            </div>
+
+            <div class="cut-pillar">
+              <div class="cut-num">03</div>
+              <div class="cut-details">
+                <h3>Hygienic Food-Grade Packaging</h3>
+                <p>No messy leaks! We package every order in clean, food-safe containers and bags so your fresh meat
+                  reaches your kitchen spotless and ready to cook.</p>
+              </div>
+            </div>
+
+            <div class="cut-pillar">
+              <div class="cut-num">04</div>
+              <div class="cut-details">
+                <h3>Pre-Order & Express Anna Nagar Pickup</h3>
+                <p>Call or WhatsApp <strong>7397471230</strong> ahead of time; your meat will be freshly
+                  cut, weighed, and packed waiting for you!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE SYED BROILERS & MUTTON STALL -->
+    <section class="section why-section" id="why-us">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-award"></i> WHY MADURAI TRUSTS US</div>
+          <h2 class="section-title">The Syed Broilers Quality Promise</h2>
+          <p class="section-subtitle">Dedicated to hygiene, fresh livestock, and honest weight for Anna Nagar and
+            Madurai families.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>100% Certified Digital Weight</h3>
+            <p>Every gram counts. We weigh all raw meat cuts precisely on certified digital scales with clean tare
+              weight. No tricks, 100% honest net meat.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+            <h3>Hygienically Cut and Packed</h3>
+            <p>Sanitized prep counters, clean water washing, and food-grade packaging so your fresh meat is pristine and
+              kitchen-ready.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-mosque"></i></div>
+            <h3>Strict 100% Halal Protocol</h3>
+            <p>Traditional Zabiha halal process performed with care. Certified fresh, pure, and spiritually trustworthy.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h3>Pre-Order & Express Pickup</h3>
+            <p>Skip the long Sunday morning butcher rush! WhatsApp your required cut and weight; we keep it chopped and
+              packed ready for you.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-people-roof"></i></div>
+            <h3>Bulk Function & Wedding Orders</h3>
+            <p>Planning an ear-piercing feast (காதணி விழா), marriage biryani, or family gathering? We supply fresh whole
+              tender goats and bulk chicken.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Prime Anna Nagar, Madurai Location</h3>
+            <p>Easily accessible stall in Anna Nagar, Madurai with quick parking and swift delivery to nearby
+              residential areas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-star"></i> CUSTOMER EXPERIENCES</div>
+          <h2 class="section-title">What Madurai Customers Say</h2>
+          <p class="section-subtitle">Trusted by families and home cooks across Anna Nagar.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="testi-rating">★★★★★</div>
+            <p class="testi-text">"The chicken and mutton from Syed Broilers are always super fresh and neatly packed.
+              The meat is tender and cooks so soft. Very clean shop in Anna Nagar!"</p>
+            <div class="testi-author">
+              <div class="author-avatar">K</div>
+              <div class="author-info">
+                <strong>K. Saravanan</strong>
+                <span>Anna Nagar Resident</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card featured">
+            <div class="testi-rating">★★★★★</div>
+            <p class="testi-text">"Pre-ordered 10kg chicken and tender mutton for our Sunday family biryani. Packed
+              hygienically, weighed accurately, and ready exactly at 7:30 AM. Superb service!"</p>
+            <div class="testi-author">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <strong>Mohamed Riaz</strong>
+                <span>Madurai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-rating">★★★★★</div>
+            <p class="testi-text">"Best place in Anna Nagar for country chicken (Nattu Kozhi). Clean cutting, honest
+              price, and hygienic packing make it my weekly go-to butcher stall."</p>
+            <div class="testi-author">
+              <div class="author-avatar">A</div>
+              <div class="author-info">
+                <strong>Anitha Ramesh</strong>
+                <span>KK Nagar / Anna Nagar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION, TIMINGS & SHOP DETAILS -->
+    <section class="section location-section" id="location">
+      <div class="container">
+        <div class="location-wrapper">
+          <div class="location-info-panel">
+            <div class="section-tag"><i class="fa-solid fa-shop"></i> VISIT OUR STALL</div>
+            <h2 class="section-title">Drop by Syed Broilers & Mutton Stall</h2>
+            <p class="location-intro">Conveniently located in Anna Nagar, Madurai. Fresh chicken and tender mutton
+              slaughtered and butchered live daily.</p>
+
+            <div class="info-blocks">
+              <div class="info-block">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-content">
+                  <strong>Stall Address:</strong>
+                  <p><strong>Syed Broilers & Mutton Stall</strong><br>
+                    Anna Nagar, Madurai, Tamil Nadu<br>
+                    <a href="https://maps.app.goo.gl/wZo4ToCuJjLvqx236" target="_blank"
+                      style="color: var(--gold-accent); font-weight: 700; text-decoration: underline; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px;">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps (Click here)
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-content">
+                  <strong>Direct Stall Contacts:</strong>
+                  <div class="phone-highlight">
+                    <p><a href="tel:7397471230"><i class="fa-solid fa-phone"></i> 7397471230</a> (Primary / WhatsApp)
+                    </p>
+
+                  </div>
+                  <small>Available 6:00 AM to 9:00 PM for phone and WhatsApp orders</small>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="info-content">
+                  <strong>Shop Timings:</strong>
+                  <ul class="hours-list">
+                    <li><span>Monday – Saturday:</span> <strong>6:00 AM – 9:00 PM</strong></li>
+                    <li><span>Sunday (Morning Rush):</span> <strong>5:30 AM – 9:30 PM</strong></li>
+                  </ul>
+                  <small class="tip-text">💡 Sunday Tip: Send your meat order on WhatsApp to 7397471230 before 7:00 AM
+                    to skip the line!</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-cta-group">
+              <a href="https://maps.app.goo.gl/wZo4ToCuJjLvqx236" target="_blank" class="btn btn-primary"
+                id="openMapsBtn">
+                <i class="fa-solid fa-location-arrow"></i> Get Google Maps Directions
+              </a>
+              <button class="btn btn-outline" id="copyAddressBtn" onclick="copyShopAddress()">
+                <i class="fa-regular fa-copy"></i> Copy Address
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Map Card Preview -->
+          <div class="location-map-panel">
+            <div class="map-card">
+              <div class="map-header">
+                <div class="map-title-row">
+                  <span class="map-pin-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+                  <div>
+                    <strong>Syed Broilers & Mutton Stall</strong>
+                    <small>Anna Nagar, Madurai</small>
+                  </div>
+                </div>
+                <span class="map-badge">Live Map</span>
+              </div>
+
+              <!-- Stylized Interactive Map Frame -->
+              <div class="map-embed-container">
+                <iframe title="Syed Broilers and Mutton Stall Location Map"
+                  src="https://maps.google.com/maps?q=9.9209361,78.1433571+(Syed+Broilers+%26+Mutton+Stall+Anna+Nagar+Madurai)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                  width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+
+              <div class="map-footer-details">
+                <div class="map-quick-tag">
+                  <i class="fa-solid fa-motorcycle"></i> Two-wheeler & car parking right outside shop
+                </div>
+                <div class="map-quick-tag">
+                  <i class="fa-solid fa-shield-heart"></i> Clean Butcher Block & Daily Sanitization
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-circle-question"></i> FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title">Fresh Meat Sourcing & Orders</h2>
+          <p class="section-subtitle">Everything you need to know about our daily cuts, weighing, and pickup.</p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is your meat stall 100% Halal certified?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, 100%. At Syed Broilers & Mutton Stall, all chicken and mutton are slaughtered strictly under
+                authentic Zabiha Halal methods.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How is the meat hygienically cut and packed?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We wash the meat with pure clean water, chop on sanitized butcher blocks with clean cleavers, and pack
+                into leak-proof food-grade packages so it arrives at your home kitchen spotless and fresh.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I reserve my meat over WhatsApp to avoid Sunday morning queue?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Send a message to <strong>7397471230</strong> with your desired cut (e.g. 1.5kg Biryani cut with
+                Nalli or 1kg Broiler chicken) and arrival time. We will have it weighed, cut, and neatly packed for you
+                to pick up in seconds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can you cut the raw meat according to my specific dish requirements?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Tell us if you want: large biryani chunks with bone marrow, medium curry cut, boneless chukka
+                cubes, chicken 65 bite-size pieces, or cleaned soup trotters (paya).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you supply bulk meat for weddings and functions?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we supply bulk tender goat and chicken for ear-piercing ceremonies (காதணி விழா), marriage biryani
+                feasts, and family functions. Call <strong>7397471230</strong> in advance for special bulk
+                bookings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-glow"></div>
+          <div class="cta-content">
+            <span class="cta-badge"><i class="fa-solid fa-certificate"></i> FRESH CHICKEN, FRESH MUTTON</span>
+            <h2>Taste the Real Fresh Tender Meat Difference</h2>
+            <p>Hygienically cut and packed for your family. Visit us at Anna Nagar, Madurai or order via WhatsApp.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20would%20like%20to%20order%20meat"
+                target="_blank" class="btn btn-whatsapp-lg">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp: 7397471230
+              </a>
+              <a href="tel:7397471230" class="btn btn-call-lg">
+                <i class="fa-solid fa-phone"></i> Call 7397471230
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img
+              src="../../.gemini/antigravity-ide/brain/0de3ed73-c049-4ff8-ad76-60bf8a2cb155/.user_uploaded/media_1792169016334.png"
+              alt="Syed Broilers & Mutton Stall Logo" class="footer-logo-img"
+              onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+            <span class="f-name">SYED BROILERS & MUTTON STALL</span>
+          </div>
+          <p class="footer-tagline">
+            Fresh Chicken, Fresh Mutton • Hygienically cut and packed daily in Anna Nagar, Madurai.
+          </p>
+          <div class="footer-badges">
+            <span class="f-badge"><i class="fa-solid fa-circle-check"></i> 100% Halal</span>
+            <span class="f-badge"><i class="fa-solid fa-circle-check"></i> Fresh Chicken</span>
+            <span class="f-badge"><i class="fa-solid fa-circle-check"></i> Fresh Mutton</span>
+            <span class="f-badge"><i class="fa-solid fa-circle-check"></i> Hygienically Packed</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#cuts">Fresh Meat Cuts</a></li>
+            <li><a href="#rates">Today's Rate Board</a></li>
+            <li><a href="#estimator">Order Price Estimator</a></li>
+            <li><a href="#butchery">Hygiene Standards</a></li>
+            <li><a href="#location">Stall Location & Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Cuts -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Popular Cuts</h4>
+          <ul class="footer-links">
+            <li><a href="#cuts">Fresh Farm Broiler Chicken</a></li>
+            <li><a href="#cuts">Tender Goat Mutton (Bone-in)</a></li>
+            <li><a href="#cuts">Mutton Biryani Cut (with Nalli)</a></li>
+            <li><a href="#cuts">Original Nattu Kozhi</a></li>
+            <li><a href="#cuts">Boneless Chukka Cubes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stall Details -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Stall Details</h4>
+          <div class="footer-contact-info">
+            <p><i class="fa-solid fa-phone"></i> <strong>Call / WhatsApp:</strong> <a
+                href="tel:7397471230">7397471230</a></p>
+            <p><i class="fa-solid fa-location-dot"></i> Anna Nagar, Madurai, Tamil Nadu</p>
+            <p><i class="fa-solid fa-map-location-dot"></i> <a href="https://maps.app.goo.gl/wZo4ToCuJjLvqx236"
+                target="_blank" style="color: var(--gold-accent);">View Google Maps Location</a></p>
+            <p><i class="fa-solid fa-clock"></i> 6:00 AM – 9:00 PM (Daily)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Syed Broilers & Mutton Stall. Anna Nagar, Madurai.</p>
+        <div class="footer-bottom-links">
+          <span>Fresh Chicken • Fresh Mutton • Hygienically Cut & Packed</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM STICKY BAR -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar">
+    <a href="tel:7397471230" class="sticky-action call-action">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 7397471230</span>
+    </a>
+    <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20want%20to%20order%20meat"
+      target="_blank" class="sticky-action wa-action">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Order on WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- QUICK ORDER MODAL -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeOrderModal()" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="modal-sub">Fresh Meat Pre-Order</span>
+        <h3 id="modalItemTitle">Pre-Order Fresh Meat</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-price-tag">Rate: <span id="modalItemPrice">₹240</span>/kg</div>
+
+        <div class="modal-field">
+          <label>Select Weight / Quantity:</label>
+          <div class="modal-qty-buttons">
+            <button type="button" class="m-qty-btn" onclick="setModalQty(0.5)">0.5 kg</button>
+            <button type="button" class="m-qty-btn active" onclick="setModalQty(1.0)">1 kg</button>
+            <button type="button" class="m-qty-btn" onclick="setModalQty(1.5)">1.5 kg</button>
+            <button type="button" class="m-qty-btn" onclick="setModalQty(2.0)">2 kg</button>
+          </div>
+        </div>
+
+        <div class="modal-field">
+          <label for="modalPrepSelect">How Should the Butcher Chop the Meat?</label>
+          <select id="modalPrepSelect" class="modal-select">
+            <option value="Medium Curry Cut">Medium Curry Cut</option>
+            <option value="Large Biryani Chunks with Nalli">Large Biryani Chunks with Nalli</option>
+            <option value="Small Chukka / Fry Cut">Small Chukka / Fry Cut</option>
+            <option value="Skinless Cleaned">Skinless Cleaned</option>
+            <option value="Turmeric Dip / Wash">Turmeric Dip / Wash</option>
+          </select>
+        </div>
+
+        <div class="modal-field">
+          <label for="modalNotes">Pickup / Delivery Note (Optional):</label>
+          <input type="text" id="modalNotes" class="modal-input" placeholder="e.g. Pickup at 8am / Anna Nagar delivery">
+        </div>
+
+        <div class="modal-total-line">
+          <span>Estimated Total:</span>
+          <strong id="modalTotalPrice">₹240</strong>
+        </div>
+
+        <button class="btn btn-modal-send" onclick="sendModalWhatsAppOrder()">
+          <i class="fa-brands fa-whatsapp"></i> Send Order to 7397471230
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Address copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts: External + Full Inlined Implementation for Bulletproof Local Execution -->
+  <script src="script.js"></script>
+  <script>
+    /**
+     * SYED BROILERS & MUTTON STALL - INTERACTIVE ENGINE
+     * Anna Nagar, Madurai | Contact: 7397471230 / 6383184080
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      initThemeToggle();
+      initLiveShopStatus();
+      initRateDate();
+      initHeaderScroll();
+      initMobileDrawer();
+      initCategoryFilters();
+      initEstimator();
+      initFaqAccordion();
+    });
+
+    function initThemeToggle() {
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const drawerThemeToggleBtn = document.getElementById('drawerThemeToggleBtn');
+      const themeText = document.getElementById('themeText');
+      const drawerThemeText = document.getElementById('drawerThemeText');
+
+      function updateThemeUI(theme) {
+        const isLight = theme === 'light';
+        if (themeText) {
+          themeText.textContent = isLight ? 'Dark' : 'Light';
+        }
+        if (drawerThemeText) {
+          drawerThemeText.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+        }
+        if (themeToggleBtn) {
+          const label = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+          themeToggleBtn.setAttribute('title', label);
+          themeToggleBtn.setAttribute('aria-label', label);
+        }
+      }
+
+      function toggleTheme(e) {
+        if (e) e.preventDefault();
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        try {
+          localStorage.setItem('syed_stall_theme', nextTheme);
+        } catch (err) { }
+        updateThemeUI(nextTheme);
+        showToast(nextTheme === 'light' ? '☀️ Switched to Light Mode' : '🌙 Switched to Dark Mode');
+      }
+
+      // Sync button labels on load
+      const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      updateThemeUI(initialTheme);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleTheme);
+      }
+      if (drawerThemeToggleBtn) {
+        drawerThemeToggleBtn.addEventListener('click', toggleTheme);
+      }
+    }
+
+    function initLiveShopStatus() {
+      const statusBadge = document.getElementById('liveStatusBadge');
+      const statusText = document.getElementById('liveStatusText');
+      if (!statusBadge || !statusText) return;
+
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const timeInMinutes = hour * 60 + minute;
+
+      let openTime = 6 * 60; // 6:00 AM
+      let closeTime = 21 * 60; // 9:00 PM
+
+      if (day === 0) {
+        openTime = 5 * 60 + 30; // 5:30 AM
+        closeTime = 21 * 60 + 30; // 9:30 PM
+      }
+
+      const isOpen = timeInMinutes >= openTime && timeInMinutes <= closeTime;
+
+      if (isOpen) {
+        statusText.textContent = 'OPEN NOW • Fresh Stock Ready';
+      } else {
+        statusText.textContent = 'OPENS 6:00 AM • Accepting WhatsApp Orders';
+        const dot = statusBadge.querySelector('.status-dot');
+        if (dot) dot.style.backgroundColor = '#ffb703';
+        statusBadge.style.color = '#ffb703';
+        statusBadge.style.borderColor = 'rgba(255, 183, 3, 0.4)';
+        statusBadge.style.background = 'rgba(255, 183, 3, 0.12)';
+      }
+    }
+
+    function initRateDate() {
+      const dateEl = document.getElementById('rateDate');
+      if (dateEl) {
+        const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+        const todayStr = new Date().toLocaleDateString('en-IN', options);
+        dateEl.textContent = `Live Rates for ${todayStr} • Daily Morning Fresh Stock`;
+      }
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    }
+
+    function initHeaderScroll() {
+      const header = document.getElementById('siteHeader');
+      if (!header) return;
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+
+    function initMobileDrawer() {
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const drawer = document.getElementById('mobileDrawer');
+      const closeBtn = document.getElementById('drawerCloseBtn');
+      const drawerLinks = document.querySelectorAll('.drawer-item');
+
+      if (!mobileBtn || !drawer || !closeBtn) return;
+
+      mobileBtn.addEventListener('click', () => drawer.classList.add('open'));
+      closeBtn.addEventListener('click', () => drawer.classList.remove('open'));
+      drawerLinks.forEach(link => link.addEventListener('click', () => drawer.classList.remove('open')));
+
+      document.addEventListener('click', (e) => {
+        if (drawer.classList.contains('open') && !drawer.contains(e.target) && !mobileBtn.contains(e.target)) {
+          drawer.classList.remove('open');
+        }
+      });
+    }
+
+    function initCategoryFilters() {
+      const tabBtns = document.querySelectorAll('#cutFilters .tab-btn');
+      const cards = document.querySelectorAll('#catalogGrid .catalog-card');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const categories = card.getAttribute('data-category') || '';
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    let estimatorState = {
+      selectedMeat: 'Fresh Farm Broiler Chicken',
+      rate: 240,
+      isFixedPrice: false,
+      weight: 1.0,
+      prepStyle: 'Medium Curry Cut',
+      orderMode: 'Store Pickup at Anna Nagar Stall',
+      customerName: ''
+    };
+
+    function initEstimator() {
+      const meatRadios = document.querySelectorAll('input[name="meatSelection"]');
+      meatRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          document.querySelectorAll('.cut-radio-label').forEach(lbl => lbl.classList.remove('active'));
+          radio.closest('.cut-radio-label').classList.add('active');
+
+          estimatorState.selectedMeat = radio.value;
+          estimatorState.rate = parseFloat(radio.getAttribute('data-rate'));
+          estimatorState.isFixedPrice = radio.getAttribute('data-is-fixed') === 'true';
+
+          const weightGroup = document.getElementById('weightGroup');
+          if (weightGroup) {
+            weightGroup.style.opacity = estimatorState.isFixedPrice ? '0.6' : '1';
+          }
+
+          updateEstimatorSummary();
+        });
+      });
+
+      const slider = document.getElementById('weightSlider');
+      const weightDisplay = document.getElementById('weightDisplayValue');
+      const weightPills = document.querySelectorAll('.weight-pill');
+
+      if (slider) {
+        slider.addEventListener('input', (e) => {
+          const val = parseFloat(e.target.value);
+          estimatorState.weight = val;
+          if (weightDisplay) weightDisplay.textContent = `${val.toFixed(2)} kg`;
+
+          weightPills.forEach(pill => {
+            if (parseFloat(pill.getAttribute('data-weight')) === val) {
+              pill.classList.add('active');
+            } else {
+              pill.classList.remove('active');
+            }
+          });
+
+          updateEstimatorSummary();
+        });
+      }
+
+      weightPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          weightPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          const val = parseFloat(pill.getAttribute('data-weight'));
+          estimatorState.weight = val;
+          if (slider) slider.value = val;
+          if (weightDisplay) weightDisplay.textContent = `${val.toFixed(2)} kg`;
+
+          updateEstimatorSummary();
+        });
+      });
+
+      const prepRadios = document.querySelectorAll('input[name="prepStyle"]');
+      prepRadios.forEach(r => {
+        r.addEventListener('change', () => {
+          estimatorState.prepStyle = r.value;
+          updateEstimatorSummary();
+        });
+      });
+
+      const modeRadios = document.querySelectorAll('input[name="orderMode"]');
+      modeRadios.forEach(m => {
+        m.addEventListener('change', () => {
+          document.querySelectorAll('.mode-label').forEach(lbl => lbl.classList.remove('active'));
+          m.closest('.mode-label').classList.add('active');
+          estimatorState.orderMode = m.value;
+          updateEstimatorSummary();
+        });
+      });
+
+      const nameInput = document.getElementById('customerNameInput');
+      if (nameInput) {
+        nameInput.addEventListener('input', (e) => {
+          estimatorState.customerName = e.target.value.trim();
+          updateEstimatorSummary();
+        });
+      }
+
+      updateEstimatorSummary();
+    }
+
+    function updateEstimatorSummary() {
+      const sumCut = document.getElementById('sumCut');
+      const sumWeight = document.getElementById('sumWeight');
+      const sumPrep = document.getElementById('sumPrep');
+      const sumMode = document.getElementById('sumMode');
+      const sumTotal = document.getElementById('sumTotal');
+      const waTrigger = document.getElementById('whatsappOrderTrigger');
+
+      let totalAmount = 0;
+      let weightText = `${estimatorState.weight.toFixed(2)} kg`;
+
+      if (estimatorState.isFixedPrice) {
+        totalAmount = Math.round(estimatorState.rate * Math.max(1, Math.round(estimatorState.weight)));
+        weightText = `${Math.max(1, Math.round(estimatorState.weight))} Set(s)`;
+      } else {
+        totalAmount = Math.round(estimatorState.rate * estimatorState.weight);
+      }
+
+      if (sumCut) sumCut.textContent = estimatorState.selectedMeat;
+      if (sumWeight) sumWeight.textContent = weightText;
+      if (sumPrep) sumPrep.textContent = estimatorState.prepStyle;
+      if (sumMode) sumMode.textContent = estimatorState.orderMode.includes('Pickup') ? 'Stall Pickup' : 'Home Delivery';
+      if (sumTotal) sumTotal.textContent = totalAmount.toLocaleString('en-IN');
+
+      const phone = '7397471230';
+      const customerDetails = estimatorState.customerName ? `\n*Customer Info:* ${estimatorState.customerName}` : '';
+
+      const rawMessage =
+        `🍗 *SYED BROILERS & MUTTON STALL - ORDER*
+----------------------------------------
+*Item:* ${estimatorState.selectedMeat}
+*Quantity / Weight:* ${weightText}
+*Chopping Preference:* ${estimatorState.prepStyle}
+*Mode:* ${estimatorState.orderMode}${customerDetails}
+*Estimated Total:* ₹${totalAmount.toLocaleString('en-IN')}
+----------------------------------------
+_Please confirm fresh cut availability & keep packed!_
+Location: Anna Nagar, Madurai (Contact: 7397471230 / 6383184080)`;
+
+      if (waTrigger) {
+        waTrigger.href = `https://wa.me/91${phone}?text=${encodeURIComponent(rawMessage)}`;
+      }
+    }
+
+    function quickAddToEstimator(meatName, rate) {
+      const radios = document.querySelectorAll('input[name="meatSelection"]');
+      let matched = false;
+      radios.forEach(r => {
+        if (r.value.toLowerCase().includes(meatName.toLowerCase()) || meatName.toLowerCase().includes(r.value.toLowerCase())) {
+          r.checked = true;
+          r.dispatchEvent(new Event('change'));
+          matched = true;
+        }
+      });
+      if (!matched) {
+        estimatorState.selectedMeat = meatName;
+        estimatorState.rate = rate;
+        updateEstimatorSummary();
+      }
+      const estimatorSection = document.getElementById('estimator');
+      if (estimatorSection) {
+        estimatorSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      showToast(`Selected "${meatName}" in Order Estimator!`);
+    }
+
+    let modalCurrentCut = 'Fresh Farm Broiler Chicken';
+    let modalCurrentRate = 240;
+    let modalCurrentQty = 1.0;
+
+    function openOrderModal(cutName, rate) {
+      modalCurrentCut = cutName;
+      modalCurrentRate = rate;
+      modalCurrentQty = 1.0;
+
+      const modal = document.getElementById('orderModal');
+      const title = document.getElementById('modalItemTitle');
+      const price = document.getElementById('modalItemPrice');
+
+      if (title) title.textContent = cutName;
+      if (price) price.textContent = `₹${rate}`;
+
+      updateModalTotal();
+      if (modal) modal.classList.add('open');
+    }
+
+    function closeOrderModal() {
+      const modal = document.getElementById('orderModal');
+      if (modal) modal.classList.remove('open');
+    }
+
+    function setModalQty(qty) {
+      modalCurrentQty = qty;
+      const buttons = document.querySelectorAll('.m-qty-btn');
+      buttons.forEach(b => {
+        if (parseFloat(b.textContent) === qty) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      updateModalTotal();
+    }
+
+    function updateModalTotal() {
+      const totalEl = document.getElementById('modalTotalPrice');
+      if (!totalEl) return;
+      const total = Math.round(modalCurrentRate * modalCurrentQty);
+      totalEl.textContent = `₹${total.toLocaleString('en-IN')}`;
+    }
+
+    function sendModalWhatsAppOrder() {
+      const prepSelect = document.getElementById('modalPrepSelect');
+      const notesInput = document.getElementById('modalNotes');
+
+      const prep = prepSelect ? prepSelect.value : 'Medium Curry Cut';
+      const notes = notesInput ? notesInput.value.trim() : '';
+      const total = Math.round(modalCurrentRate * modalCurrentQty);
+      const notesText = notes ? `\n*Note:* ${notes}` : '';
+
+      const message =
+        `🍗 *SYED BROILERS & MUTTON STALL - PRE-ORDER*
+----------------------------------------
+*Item:* ${modalCurrentCut}
+*Weight:* ${modalCurrentQty} kg
+*Chopping Style:* ${prep}${notesText}
+*Estimated Amount:* ₹${total.toLocaleString('en-IN')}
+----------------------------------------
+_Please confirm fresh cut availability at Anna Nagar stall._
+(Contact: 7397471230 / 6383184080)`;
+
+      const phone = '7397471230';
+      window.open(`https://wa.me/91${phone}?text=${encodeURIComponent(message)}`, '_blank');
+      closeOrderModal();
+    }
+
+    document.addEventListener('click', (e) => {
+      const modal = document.getElementById('orderModal');
+      if (modal && modal.classList.contains('open') && e.target === modal) {
+        closeOrderModal();
+      }
+    });
+
+    function initFaqAccordion() {
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+          question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            items.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+          });
+        }
+      });
+    }
+
+    function copyShopAddress() {
+      const addressText = "Syed Broilers & Mutton Stall, Anna Nagar, Madurai, Tamil Nadu (Contact: 7397471230 / 6383184080) Maps: https://maps.app.goo.gl/wZo4ToCuJjLvqx236";
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(addressText)
+          .then(() => showToast('Stall address copied to clipboard!'))
+          .catch(() => fallbackCopy(addressText));
+      } else {
+        fallbackCopy(addressText);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Stall address copied to clipboard!');
+      } catch (err) {
+        showToast('Anna Nagar, Madurai (7397471230 / 6383184080)');
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3200);
+    }
+  </script>
+</body>
+
+</html>
