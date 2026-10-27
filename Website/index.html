@@ -430,8 +430,16 @@
       color: #171115 !important;
     }
 
+    [data-theme="light"] .rate-price .currency {
+      color: #c10024;
+    }
+
     [data-theme="light"] .rate-price .unit {
-      color: #6c5a66;
+      color: #574a52;
+    }
+
+    [data-theme="light"] .card-price {
+      color: #c10024;
     }
 
     [data-theme="light"] .rate-price {
@@ -1259,11 +1267,12 @@
 
     .highlight-num {
       display: block;
-      font-family: var(--font-heading);
+      font-family: var(--font-main);
       font-size: 1.35rem;
       font-weight: 800;
       color: #fff;
       line-height: 1.2;
+      letter-spacing: -0.02em;
     }
 
     .highlight-lbl {
@@ -1667,30 +1676,35 @@
     .rate-price {
       display: flex;
       align-items: baseline;
-      gap: 4px;
+      gap: 3px;
       margin-bottom: 20px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .rate-price .currency {
-      font-size: 1.2rem;
+      font-family: var(--font-main);
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--primary-bright);
     }
 
     .rate-price .amount {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-family: var(--font-main);
+      font-size: 2.15rem;
       font-weight: 800;
       color: var(--text-white, #fff);
       line-height: 1;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
     }
 
     .rate-price .unit {
-      font-size: 0.85rem;
+      font-family: var(--font-main);
+      font-size: 0.88rem;
       color: var(--text-muted);
       font-weight: 600;
+      margin-left: 3px;
     }
 
     .rate-specs {
@@ -1898,11 +1912,13 @@
     }
 
     .card-price {
-      font-family: var(--font-heading);
+      font-family: var(--font-main);
       font-weight: 800;
       color: var(--primary-bright);
       font-size: 1.15rem;
       white-space: nowrap;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
     }
 
     .card-tamil-title {
@@ -2611,8 +2627,8 @@
     }
 
     .cut-num {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
+      font-family: var(--font-main);
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--primary-bright);
       background: rgba(239, 35, 60, 0.1);
@@ -2623,6 +2639,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
     }
 
     .cut-details h3 {
