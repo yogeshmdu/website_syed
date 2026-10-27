@@ -114,6 +114,11 @@
   transform: translateY(-1px);
 }
 
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--primary-bright);
+  outline-offset: 2px;
+}
+
 .theme-toggle-icon {
   display: flex;
   align-items: center;
@@ -174,6 +179,11 @@
 .drawer-theme-toggle:hover {
   background: var(--bg-elevated);
   border-color: var(--gold-accent);
+}
+
+.drawer-theme-toggle:focus-visible {
+  outline: 2px solid var(--primary-bright);
+  outline-offset: 2px;
 }
 
 .d-theme-icons {
@@ -363,6 +373,7 @@
 [data-theme="light"] .btn-outline,
 [data-theme="light"] .btn-card-order,
 [data-theme="light"] .btn-cut-order,
+[data-theme="light"] .btn-cut-inquire,
 [data-theme="light"] .tab-btn {
   background: #f6eff3;
   border-color: rgba(0, 0, 0, 0.08);
@@ -373,6 +384,9 @@
 [data-theme="light"] .prep-chip:hover span,
 [data-theme="light"] .mode-label:hover .mode-box,
 [data-theme="light"] .btn-secondary:hover,
+[data-theme="light"] .btn-outline:hover,
+[data-theme="light"] .btn-card-order:hover,
+[data-theme="light"] .btn-cut-inquire:hover,
 [data-theme="light"] .tab-btn:hover {
   background: #ede3ea;
   color: #171115;
@@ -383,18 +397,58 @@
   color: #171115;
 }
 
-[data-theme="light"] .estimator-summary-card {
-  background: #fdfafc;
-  border-color: rgba(196, 124, 0, 0.35);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-}
-
-[data-theme="light"] .summary-total-box {
-  background: #f0e7ec;
-}
-
-[data-theme="light"] .sum-val {
+[data-theme="light"] .map-title-row strong {
   color: #171115;
+}
+
+[data-theme="light"] .map-title-row small {
+  color: #574a52;
+}
+
+[data-theme="light"] .map-badge {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
+}
+
+[data-theme="light"] .btn-call-lg {
+  background: #f2e9ee;
+  color: #171115;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .btn-call-lg:hover {
+  background: #e7dde3;
+  color: var(--primary-crimson);
+  border-color: var(--primary-crimson);
+}
+
+[data-theme="light"] .rate-tamil,
+[data-theme="light"] .card-tamil-title,
+[data-theme="light"] .card-sub,
+[data-theme="light"] .tip-text {
+  color: #613b00;
+}
+
+[data-theme="light"] .section-tag {
+  color: #9d001e;
+  background: #fbe5ea;
+  border-color: rgba(157, 0, 30, 0.25);
+}
+
+[data-theme="light"] .cut-num {
+  color: #9d001e;
+  background: #fbe5ea;
+}
+
+[data-theme="light"] .rate-footer-note {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #3d3238;
+}
+
+[data-theme="light"] .rate-footer-note strong {
+  color: #9d001e;
 }
 
 [data-theme="light"] .mobile-sticky-bar {
@@ -1799,6 +1853,39 @@ button {
   gap: 10px;
 }
 
+.btn-cut-inquire {
+  width: 100%;
+  background: var(--bg-surface);
+  color: #fff;
+  border: 1px solid var(--border-subtle);
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-cut-inquire i {
+  color: var(--wa-green);
+  font-size: 1.1rem;
+}
+
+.btn-cut-inquire:hover {
+  background: var(--wa-green);
+  border-color: var(--wa-green);
+  color: #fff;
+  box-shadow: 0 4px 15px var(--wa-glow);
+}
+
+.btn-cut-inquire:hover i {
+  color: #fff;
+}
+
 .btn-cut-order {
   flex: 1;
   background: var(--bg-surface);
@@ -3048,7 +3135,7 @@ button {
 
 .footer-tagline {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #c4b6bf;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -3084,12 +3171,12 @@ button {
 
 .footer-links li a {
   font-size: 0.88rem;
-  color: var(--text-secondary);
+  color: #ddd0d7;
   transition: color var(--transition-fast);
 }
 
 .footer-links li a:hover {
-  color: var(--primary-bright);
+  color: #ff4d6d;
   padding-left: 4px;
 }
 
@@ -3098,7 +3185,11 @@ button {
   flex-direction: column;
   gap: 12px;
   font-size: 0.88rem;
-  color: var(--text-secondary);
+  color: #ddd0d7;
+}
+
+.footer-contact-info strong {
+  color: #ffffff;
 }
 
 .footer-contact-info i {
@@ -3113,7 +3204,7 @@ button {
 
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3121,7 +3212,7 @@ button {
   gap: 12px;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #c4b6bf;
 }
 
 @media (min-width: 768px) {

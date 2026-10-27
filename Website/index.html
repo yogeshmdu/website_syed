@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Instant Theme Initializer to prevent flicker -->
+  <!-- Instant Theme Initializer: Always starts in Light Mode on initial open -->
   <script>
     (function () {
       try {
-        var saved = localStorage.getItem('syed_stall_theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', saved);
-      } catch (e) { }
+        var theme = sessionStorage.getItem('syed_stall_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
     })();
+
+    function updateThemeUI(theme) {
+      var isLight = theme === 'light';
+      var themeText = document.getElementById('themeText');
+      var drawerThemeText = document.getElementById('drawerThemeText');
+      var themeToggleBtn = document.getElementById('themeToggleBtn');
+      var drawerThemeToggleBtn = document.getElementById('drawerThemeToggleBtn');
+
+      if (themeText) {
+        themeText.textContent = isLight ? 'Dark' : 'Light';
+      }
+      if (drawerThemeText) {
+        drawerThemeText.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      }
+      if (themeToggleBtn) {
+        var label = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+        themeToggleBtn.setAttribute('title', label);
+        themeToggleBtn.setAttribute('aria-label', label);
+      }
+      if (drawerThemeToggleBtn) {
+        var label = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+        drawerThemeToggleBtn.setAttribute('title', label);
+        drawerThemeToggleBtn.setAttribute('aria-label', label);
+      }
+    }
+
+    window.toggleTheme = function (e) {
+      if (e && e.preventDefault) e.preventDefault();
+      var html = document.documentElement;
+      var currentTheme = html.getAttribute('data-theme') || 'light';
+      var nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+      html.setAttribute('data-theme', nextTheme);
+
+      try {
+        sessionStorage.setItem('syed_stall_theme', nextTheme);
+      } catch (err) { }
+      try {
+        localStorage.setItem('syed_stall_theme', nextTheme);
+      } catch (err) { }
+
+      updateThemeUI(nextTheme);
+      if (typeof showToast === 'function') {
+        showToast(nextTheme === 'light' ? '☀️ Switched to Light Mode' : '🌙 Switched to Dark Mode');
+      }
+    };
   </script>
 
   <!-- Primary SEO Meta Tags -->
@@ -159,6 +207,11 @@
       transform: translateY(-1px);
     }
 
+    .theme-toggle-btn:focus-visible {
+      outline: 2px solid var(--primary-bright);
+      outline-offset: 2px;
+    }
+
     .theme-toggle-icon {
       display: flex;
       align-items: center;
@@ -219,6 +272,11 @@
     .drawer-theme-toggle:hover {
       background: var(--bg-elevated);
       border-color: var(--gold-accent);
+    }
+
+    .drawer-theme-toggle:focus-visible {
+      outline: 2px solid var(--primary-bright);
+      outline-offset: 2px;
     }
 
     .d-theme-icons {
@@ -412,6 +470,7 @@
     [data-theme="light"] .btn-outline,
     [data-theme="light"] .btn-card-order,
     [data-theme="light"] .btn-cut-order,
+    [data-theme="light"] .btn-cut-inquire,
     [data-theme="light"] .tab-btn {
       background: #f6eff3;
       border-color: rgba(0, 0, 0, 0.08);
@@ -422,6 +481,9 @@
     [data-theme="light"] .prep-chip:hover span,
     [data-theme="light"] .mode-label:hover .mode-box,
     [data-theme="light"] .btn-secondary:hover,
+    [data-theme="light"] .btn-outline:hover,
+    [data-theme="light"] .btn-card-order:hover,
+    [data-theme="light"] .btn-cut-inquire:hover,
     [data-theme="light"] .tab-btn:hover {
       background: #ede3ea;
       color: #171115;
@@ -432,18 +494,58 @@
       color: #171115;
     }
 
-    [data-theme="light"] .estimator-summary-card {
-      background: #fdfafc;
-      border-color: rgba(196, 124, 0, 0.35);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-    }
-
-    [data-theme="light"] .summary-total-box {
-      background: #f0e7ec;
-    }
-
-    [data-theme="light"] .sum-val {
+    [data-theme="light"] .map-title-row strong {
       color: #171115;
+    }
+
+    [data-theme="light"] .map-title-row small {
+      color: #574a52;
+    }
+
+    [data-theme="light"] .map-badge {
+      background: #dcfce7;
+      color: #15803d;
+      border-color: #86efac;
+    }
+
+    [data-theme="light"] .btn-call-lg {
+      background: #f2e9ee;
+      color: #171115;
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    [data-theme="light"] .btn-call-lg:hover {
+      background: #e7dde3;
+      color: var(--primary-crimson);
+      border-color: var(--primary-crimson);
+    }
+
+    [data-theme="light"] .rate-tamil,
+    [data-theme="light"] .card-tamil-title,
+    [data-theme="light"] .card-sub,
+    [data-theme="light"] .tip-text {
+      color: #613b00;
+    }
+
+    [data-theme="light"] .section-tag {
+      color: #9d001e;
+      background: #fbe5ea;
+      border-color: rgba(157, 0, 30, 0.25);
+    }
+
+    [data-theme="light"] .cut-num {
+      color: #9d001e;
+      background: #fbe5ea;
+    }
+
+    [data-theme="light"] .rate-footer-note {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      color: #3d3238;
+    }
+
+    [data-theme="light"] .rate-footer-note strong {
+      color: #9d001e;
     }
 
     [data-theme="light"] .mobile-sticky-bar {
@@ -1848,6 +1950,39 @@
       gap: 10px;
     }
 
+    .btn-cut-inquire {
+      width: 100%;
+      background: var(--bg-surface);
+      color: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 11px 16px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .btn-cut-inquire i {
+      color: var(--wa-green);
+      font-size: 1.1rem;
+    }
+
+    .btn-cut-inquire:hover {
+      background: var(--wa-green);
+      border-color: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--wa-glow);
+    }
+
+    .btn-cut-inquire:hover i {
+      color: #fff;
+    }
+
     .btn-cut-order {
       flex: 1;
       background: var(--bg-surface);
@@ -3097,7 +3232,7 @@
 
     .footer-tagline {
       font-size: 0.88rem;
-      color: var(--text-muted);
+      color: #c4b6bf;
       line-height: 1.6;
       margin-bottom: 20px;
     }
@@ -3133,12 +3268,12 @@
 
     .footer-links li a {
       font-size: 0.88rem;
-      color: var(--text-secondary);
+      color: #ddd0d7;
       transition: color var(--transition-fast);
     }
 
     .footer-links li a:hover {
-      color: var(--primary-bright);
+      color: #ff4d6d;
       padding-left: 4px;
     }
 
@@ -3147,7 +3282,11 @@
       flex-direction: column;
       gap: 12px;
       font-size: 0.88rem;
-      color: var(--text-secondary);
+      color: #ddd0d7;
+    }
+
+    .footer-contact-info strong {
+      color: #ffffff;
     }
 
     .footer-contact-info i {
@@ -3162,7 +3301,7 @@
 
     .footer-bottom {
       padding-top: 24px;
-      border-top: 1px solid var(--border-subtle);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -3170,7 +3309,7 @@
       gap: 12px;
       text-align: center;
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: #c4b6bf;
     }
 
     @media (min-width: 768px) {
@@ -4275,8 +4414,7 @@
   <header class="site-header" id="siteHeader">
     <div class="header-container">
       <a href="#" class="brand-logo" aria-label="Syed Broilers & Mutton Stall Home">
-        <img src="./assets/images/website-logo.png" alt="Syed Broilers & Mutton Stall Logo" class="brand-logo-img"
-          onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+        <img src="assets/images/website-logo.png" alt="Syed Broilers & Mutton Stall Logo" class="brand-logo-img">
         <div class="logo-text">
           <span class="shop-name">SYED</span>
         </div>
@@ -4285,21 +4423,21 @@
       <nav class="nav-links" id="navLinks">
         <a href="#cuts" class="nav-item">Fresh Cuts</a>
         <a href="#rates" class="nav-item">Today's Rates</a>
-        <a href="#estimator" class="nav-item">Custom Order</a>
         <a href="#butchery" class="nav-item">Hygiene Standards</a>
         <a href="#why-us" class="nav-item">Why Choose Us</a>
+        <a href="#testimonials" class="nav-item">Customer Reviews</a>
         <a href="#location" class="nav-item">Stall Location</a>
       </nav>
 
       <div class="header-actions">
         <!-- Theme Toggle Switch -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Light and Dark Mode"
-          title="Switch Theme">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" onclick="toggleTheme(event)"
+          aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
           <span class="theme-toggle-icon">
             <i class="fa-solid fa-sun icon-sun"></i>
             <i class="fa-solid fa-moon icon-moon"></i>
           </span>
-          <span class="theme-text" id="themeText">Light</span>
+          <span class="theme-text" id="themeText">Dark</span>
         </button>
         <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
           <i class="fa-solid fa-bars-staggered"></i>
@@ -4312,10 +4450,7 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
       <div class="drawer-logo">
-        <img
-          src="../../.gemini/antigravity-ide/brain/0de3ed73-c049-4ff8-ad76-60bf8a2cb155/.user_uploaded/media_1792169016334.png"
-          alt="Syed Broilers & Mutton Stall Logo" class="drawer-logo-img"
-          onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+        <img src="assets/images/website-logo.png" alt="Syed Broilers & Mutton Stall Logo" class="drawer-logo-img">
         <div>
           <span class="brand-name">SYED BROILERS & MUTTON STALL</span>
           <span class="brand-loc">Fresh Chicken, Fresh Mutton • Hygienically Cut & Packed • Anna Nagar, Madurai</span>
@@ -4326,24 +4461,25 @@
     <nav class="drawer-links">
       <a href="#cuts" class="drawer-item"><i class="fa-solid fa-drumstick-bite"></i> Fresh Raw Meat Cuts</a>
       <a href="#rates" class="drawer-item"><i class="fa-solid fa-tags"></i> Daily Meat Rate Board</a>
-      <a href="#estimator" class="drawer-item"><i class="fa-solid fa-calculator"></i> Custom Weight & Cut Estimator</a>
       <a href="#butchery" class="drawer-item"><i class="fa-solid fa-scissors"></i> Master Butchery Cuts</a>
       <a href="#why-us" class="drawer-item"><i class="fa-solid fa-award"></i> The Syed Hygiene Promise</a>
+      <a href="#testimonials" class="drawer-item"><i class="fa-solid fa-star"></i> Customer Reviews</a>
       <a href="#location" class="drawer-item"><i class="fa-solid fa-location-dot"></i> Stall Address & Timings</a>
     </nav>
     <div class="drawer-footer">
       <div class="drawer-theme-toggle-wrap">
-        <button class="drawer-theme-toggle" id="drawerThemeToggleBtn" type="button">
+        <button class="drawer-theme-toggle" id="drawerThemeToggleBtn" type="button" onclick="toggleTheme(event)"
+          aria-label="Switch to Dark Mode">
           <span class="d-theme-icons">
             <i class="fa-solid fa-sun icon-sun"></i>
             <i class="fa-solid fa-moon icon-moon"></i>
           </span>
-          <span id="drawerThemeText">Switch to Light Mode</span>
+          <span id="drawerThemeText">Switch to Dark Mode</span>
         </button>
       </div>
       <a href="tel:7397471230" class="drawer-btn call-btn"><i class="fa-solid fa-phone"></i> Call: 7397471230</a>
       <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall" target="_blank"
-        class="drawer-btn wa-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a>
+        class="drawer-btn wa-btn"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </div>
 
@@ -4393,18 +4529,18 @@
 
           <!-- Hero Action Buttons -->
           <div class="hero-cta-group">
-            <a href="https://wa.me/917397471230?text=Hi%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20want%20to%20order%20fresh%20meat"
+            <a href="https://wa.me/917397471230?text=Hi%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20would%20like%20to%20inquire%20about%20fresh%20meat"
               target="_blank" class="btn btn-primary btn-glow" id="heroOrderWhatsapp">
               <i class="fa-brands fa-whatsapp"></i>
-              <span>WhatsApp Pre-Order</span>
+              <span>Contact on WhatsApp</span>
             </a>
             <a href="tel:7397471230" class="btn btn-secondary" id="heroDirectCall">
               <i class="fa-solid fa-phone"></i>
               <span>Call: 7397471230</span>
             </a>
-            <a href="#estimator" class="btn btn-outline" id="heroEstimateLink">
-              <i class="fa-solid fa-calculator"></i>
-              <span>Order Calculator</span>
+            <a href="#rates" class="btn btn-outline" id="heroEstimateLink">
+              <i class="fa-solid fa-tags"></i>
+              <span>Today's Rate Board</span>
             </a>
           </div>
 
@@ -4430,7 +4566,7 @@
             <div class="floating-badge badge-top-right">
               <div class="badge-icon-box"><i class="fa-solid fa-check-double"></i></div>
               <div class="badge-info">
-                <strong>Cut Live On Order</strong>
+                <strong>Fresh Live Cutting</strong>
                 <span>Never stored, cut in front of you</span>
               </div>
             </div>
@@ -4489,9 +4625,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Balanced mix of shoulder, chops & ribs</li>
               <li><i class="fa-solid fa-circle-check"></i> Includes rich bone marrow nalli</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Tender Goat Mutton (Bone-in)', 850)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Tender%20Goat%20Mutton%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
 
           <!-- Rate Card 2: Fresh Broiler Chicken -->
@@ -4510,9 +4647,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Cleaned, skinless or with skin</li>
               <li><i class="fa-solid fa-circle-check"></i> Tender & succulent curry pieces</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Fresh Broiler Chicken (Cleaned)', 240)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Fresh%20Broiler%20Chicken%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
 
           <!-- Rate Card 3: Nattu Kozhi -->
@@ -4530,9 +4668,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Earthy aroma, perfect for pepper soup</li>
               <li><i class="fa-solid fa-circle-check"></i> Turmeric wash available</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Nattu Kozhi (Country Chicken)', 440)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Nattu%20Kozhi%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
 
           <!-- Rate Card 4: Biryani Cut -->
@@ -4550,9 +4689,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Retains juices during dum cooking</li>
               <li><i class="fa-solid fa-circle-check"></i> Premium tender pieces only</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Mutton Biryani Cut (with Nalli)', 880)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Mutton%20Biryani%20Cut%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
 
           <!-- Rate Card 5: Boneless Mutton -->
@@ -4570,9 +4710,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Zero bone weight, ideal for Chukka</li>
               <li><i class="fa-solid fa-circle-check"></i> Hand-trimmed clean pieces</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Pure Boneless Mutton', 1050)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Pure%20Boneless%20Mutton%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
 
           <!-- Rate Card 6: Paya & Soup Bones -->
@@ -4590,9 +4731,10 @@
               <li><i class="fa-solid fa-circle-check"></i> Rich in natural gelatin & calcium</li>
               <li><i class="fa-solid fa-circle-check"></i> Pre-split for soup cooking</li>
             </ul>
-            <button class="btn btn-card-order" onclick="openOrderModal('Aattu Kaal Paya (4 Legs Set)', 120)">
-              <i class="fa-brands fa-whatsapp"></i> Pre-Order This Cut
-            </button>
+            <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Aattu%20Kaal%20Paya%20available%20today%3F"
+              target="_blank" class="btn btn-card-order">
+              <i class="fa-brands fa-whatsapp"></i> Inquire Availability
+            </a>
           </div>
         </div>
 
@@ -4648,12 +4790,9 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Fresh Farm Broiler Chicken', 240)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Fresh%20Broiler%20Chicken%20from%20Syed%20Broilers"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Fresh%20Broiler%20Chicken%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
               </div>
             </div>
@@ -4683,12 +4822,9 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Mutton Biryani Cut (with Nalli)', 880)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Mutton%20Biryani%20Cut%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Mutton%20Biryani%20Cut%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
               </div>
             </div>
@@ -4716,12 +4852,9 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Tender Goat Mutton (Bone-in)', 850)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Mutton%20Curry%20Cut%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Mutton%20Curry%20Cut%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
               </div>
             </div>
@@ -4749,12 +4882,9 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Nattu Kozhi (Country Chicken)', 440)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Nattu%20Kozhi%20from%20Syed%20Broilers%20%26%20Mutton%20Stall"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Nattu%20Kozhi%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
               </div>
             </div>
@@ -4782,12 +4912,9 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Pure Boneless Mutton', 1050)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Boneless%20Mutton%20from%20Syed%20Broilers"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Pure%20Boneless%20Mutton%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
               </div>
             </div>
@@ -4815,236 +4942,10 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn btn-cut-order" onclick="quickAddToEstimator('Aattu Kaal Paya (Trotters)', 120)">
-                  <i class="fa-solid fa-calculator"></i> Custom Estimate
-                </button>
-                <a href="https://wa.me/917397471230?text=I%20want%20to%20order%20Aattu%20Kaal%20Paya%20from%20Syed%20Broilers"
-                  target="_blank" class="btn btn-cut-wa" aria-label="Order on WhatsApp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%2C%20is%20Aattu%20Kaal%20Paya%20available%20today%3F"
+                  target="_blank" class="btn btn-cut-inquire">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire Availability
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SMART ORDER ESTIMATOR & WHATSAPP BUILDER -->
-    <section class="section estimator-section" id="estimator">
-      <div class="container">
-        <div class="estimator-wrapper">
-          <div class="estimator-header">
-            <div class="section-tag"><i class="fa-solid fa-calculator"></i> ORDER CALCULATOR</div>
-            <h2 class="section-title">Configure Your Meat Order & Send via WhatsApp</h2>
-            <p class="section-subtitle">Pick your meat cut, specify your chopping style, choose weight, and send your
-              order straight to Syed Broilers & Mutton Stall (7397471230).</p>
-          </div>
-
-          <div class="estimator-grid">
-            <!-- Left Configurator Form -->
-            <div class="estimator-form">
-              <!-- Step 1: Select Meat Cut -->
-              <div class="form-group">
-                <label class="form-label"><i class="fa-solid fa-drumstick-bite"></i> 1. Choose Fresh Meat Cut:</label>
-                <div class="cut-radio-grid" id="meatCutOptions">
-                  <label class="cut-radio-label active">
-                    <input type="radio" name="meatSelection" value="Fresh Farm Broiler Chicken" data-rate="240" checked>
-                    <span class="radio-card">
-                      <span class="radio-name">Fresh Broiler Chicken</span>
-                      <span class="radio-sub">Clean Dressed (₹240/kg)</span>
-                    </span>
-                  </label>
-
-                  <label class="cut-radio-label">
-                    <input type="radio" name="meatSelection" value="Tender Goat Mutton (Bone-in)" data-rate="850">
-                    <span class="radio-card">
-                      <span class="radio-name">Tender Goat Mutton</span>
-                      <span class="radio-sub">Bone-in (₹850/kg)</span>
-                    </span>
-                  </label>
-
-                  <label class="cut-radio-label">
-                    <input type="radio" name="meatSelection" value="Mutton Biryani Cut (with Nalli)" data-rate="880">
-                    <span class="radio-card">
-                      <span class="radio-name">Biryani Cut (with Nalli)</span>
-                      <span class="radio-sub">Large Chunks (₹880/kg)</span>
-                    </span>
-                  </label>
-
-                  <label class="cut-radio-label">
-                    <input type="radio" name="meatSelection" value="Nattu Kozhi (Country Chicken)" data-rate="440">
-                    <span class="radio-card">
-                      <span class="radio-name">Nattu Kozhi</span>
-                      <span class="radio-sub">Country Chicken (₹440/kg)</span>
-                    </span>
-                  </label>
-
-                  <label class="cut-radio-label">
-                    <input type="radio" name="meatSelection" value="Pure Boneless Mutton" data-rate="1050">
-                    <span class="radio-card">
-                      <span class="radio-name">Boneless Mutton</span>
-                      <span class="radio-sub">Solid Flesh (₹1,050/kg)</span>
-                    </span>
-                  </label>
-
-                  <label class="cut-radio-label">
-                    <input type="radio" name="meatSelection" value="Aattu Kaal Paya (Trotters)" data-rate="120"
-                      data-is-fixed="true">
-                    <span class="radio-card">
-                      <span class="radio-name">Aattu Kaal Paya</span>
-                      <span class="radio-sub">4 Trotters Set (₹120/set)</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Step 2: Weight Selection -->
-              <div class="form-group" id="weightGroup">
-                <div class="weight-header-row">
-                  <label class="form-label"><i class="fa-solid fa-weight-hanging"></i> 2. Select Weight /
-                    Quantity:</label>
-                  <span class="weight-display" id="weightDisplayValue">1.0 kg</span>
-                </div>
-
-                <div class="weight-quick-pills">
-                  <button type="button" class="weight-pill" data-weight="0.5">0.5 kg (½ kg)</button>
-                  <button type="button" class="weight-pill active" data-weight="1.0">1.0 kg (1 kg)</button>
-                  <button type="button" class="weight-pill" data-weight="1.5">1.5 kg</button>
-                  <button type="button" class="weight-pill" data-weight="2.0">2.0 kg</button>
-                  <button type="button" class="weight-pill" data-weight="3.0">3.0 kg</button>
-                  <button type="button" class="weight-pill" data-weight="5.0">5.0 kg (Bulk)</button>
-                </div>
-
-                <div class="slider-wrap">
-                  <input type="range" min="0.25" max="10" step="0.25" value="1.0" class="custom-range"
-                    id="weightSlider">
-                  <div class="range-labels">
-                    <span>250g</span>
-                    <span>2.5 kg</span>
-                    <span>5 kg</span>
-                    <span>10 kg (Bulk Function)</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Step 3: Butchery Chopping Style -->
-              <div class="form-group">
-                <label class="form-label"><i class="fa-solid fa-scissors"></i> 3. Chopping & Packing Preference:</label>
-                <div class="prep-chips-grid">
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Medium Curry Cut" checked>
-                    <span>Medium Curry Cut</span>
-                  </label>
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Large Biryani Chunks">
-                    <span>Large Biryani Chunks</span>
-                  </label>
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Small Chukka / Fry Diced">
-                    <span>Small Chukka Diced</span>
-                  </label>
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Skinless Cleaned">
-                    <span>Skinless Cleaned</span>
-                  </label>
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Turmeric & Lemon Washed">
-                    <span>Turmeric Washed</span>
-                  </label>
-                  <label class="prep-chip">
-                    <input type="radio" name="prepStyle" value="Hygienically Double Packed">
-                    <span>Double Packed</span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Step 4: Fulfillment Method -->
-              <div class="form-group">
-                <label class="form-label"><i class="fa-solid fa-truck-fast"></i> 4. Order Mode:</label>
-                <div class="order-mode-wrap">
-                  <label class="mode-label active">
-                    <input type="radio" name="orderMode" value="Store Pickup at Anna Nagar Stall" checked>
-                    <span class="mode-box">
-                      <i class="fa-solid fa-store"></i>
-                      <strong>Stall Pickup</strong>
-                      <small>Keep packed & skip queue</small>
-                    </span>
-                  </label>
-                  <label class="mode-label">
-                    <input type="radio" name="orderMode" value="Home Delivery in Anna Nagar, Madurai">
-                    <span class="mode-box">
-                      <i class="fa-solid fa-motorcycle"></i>
-                      <strong>Home Delivery</strong>
-                      <small>Anna Nagar & Nearby Madurai</small>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Customer Name / Area -->
-              <div class="form-group">
-                <label for="customerNameInput" class="form-label"><i class="fa-solid fa-user"></i> Your Name & Area
-                  (Optional):</label>
-                <input type="text" id="customerNameInput" class="custom-input"
-                  placeholder="e.g. Karthik, Anna Nagar 80 Feet Road">
-              </div>
-            </div>
-
-            <!-- Right Summary Box -->
-            <div class="estimator-summary-card">
-              <div class="summary-header">
-                <h3>Order Estimate</h3>
-                <span class="summary-stall-badge">Syed Broilers & Mutton</span>
-              </div>
-
-              <div class="summary-lines">
-                <div class="sum-line">
-                  <span class="sum-lbl">Selected Meat:</span>
-                  <span class="sum-val" id="sumCut">Fresh Farm Broiler Chicken</span>
-                </div>
-                <div class="sum-line">
-                  <span class="sum-lbl">Net Weight:</span>
-                  <span class="sum-val" id="sumWeight">1.0 kg</span>
-                </div>
-                <div class="sum-line">
-                  <span class="sum-lbl">Chopping Style:</span>
-                  <span class="sum-val" id="sumPrep">Medium Curry Cut</span>
-                </div>
-                <div class="sum-line">
-                  <span class="sum-lbl">Order Mode:</span>
-                  <span class="sum-val" id="sumMode">Stall Pickup</span>
-                </div>
-                <div class="sum-line">
-                  <span class="sum-lbl">Shop Phone:</span>
-                  <span class="sum-val highlight">7397471230</span>
-                </div>
-              </div>
-
-              <div class="summary-divider"></div>
-
-              <div class="summary-total-box">
-                <div class="total-text">Estimated Price</div>
-                <div class="total-amount-row">
-                  <span class="total-currency">₹</span>
-                  <span class="total-price" id="sumTotal">240</span>
-                </div>
-                <small class="total-disclaimer">*Actual billing on digital butcher scale. 100% net weight
-                  guarantee.</small>
-              </div>
-
-              <div class="summary-actions">
-                <a href="#" class="btn btn-summary-wa" id="whatsappOrderTrigger" target="_blank">
-                  <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
-                </a>
-                <a href="tel:7397471230" class="btn btn-summary-call">
-                  <i class="fa-solid fa-phone"></i> Call Stall (7397471230)
-                </a>
-              </div>
-
-              <div class="summary-trust-bullets">
-                <div><i class="fa-solid fa-check"></i> Fresh Chicken, Fresh Mutton</div>
-                <div><i class="fa-solid fa-check"></i> Hygienically Cut and Packed</div>
-                <div><i class="fa-solid fa-check"></i> Anna Nagar, Madurai Location</div>
               </div>
             </div>
           </div>
@@ -5103,9 +5004,9 @@
             <div class="cut-pillar">
               <div class="cut-num">04</div>
               <div class="cut-details">
-                <h3>Pre-Order & Express Anna Nagar Pickup</h3>
+                <h3>Express Anna Nagar Stall Pickup</h3>
                 <p>Call or WhatsApp <strong>7397471230</strong> ahead of time; your meat will be freshly
-                  cut, weighed, and packed waiting for you!</p>
+                  cut, weighed, and packed waiting for your arrival!</p>
               </div>
             </div>
           </div>
@@ -5147,14 +5048,14 @@
 
           <div class="why-card">
             <div class="why-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
-            <h3>Pre-Order & Express Pickup</h3>
+            <h3>Express Stall Pickup</h3>
             <p>Skip the long Sunday morning butcher rush! WhatsApp your required cut and weight; we keep it chopped and
               packed ready for you.</p>
           </div>
 
           <div class="why-card">
             <div class="why-icon-box"><i class="fa-solid fa-people-roof"></i></div>
-            <h3>Bulk Function & Wedding Orders</h3>
+            <h3>Bulk Function & Wedding Supply</h3>
             <p>Planning an ear-piercing feast (காதணி விழா), marriage biryani, or family gathering? We supply fresh whole
               tender goats and bulk chicken.</p>
           </div>
@@ -5170,7 +5071,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section testimonials-section">
+    <section class="section testimonials-section" id="testimonials">
       <div class="container">
         <div class="section-header text-center">
           <div class="section-tag"><i class="fa-solid fa-star"></i> CUSTOMER EXPERIENCES</div>
@@ -5399,9 +5300,10 @@
           <div class="cta-content">
             <span class="cta-badge"><i class="fa-solid fa-certificate"></i> FRESH CHICKEN, FRESH MUTTON</span>
             <h2>Taste the Real Fresh Tender Meat Difference</h2>
-            <p>Hygienically cut and packed for your family. Visit us at Anna Nagar, Madurai or order via WhatsApp.</p>
+            <p>Hygienically cut and packed for your family. Visit us at Anna Nagar, Madurai or contact us on WhatsApp.
+            </p>
             <div class="cta-buttons">
-              <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20would%20like%20to%20order%20meat"
+              <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20would%20like%20to%20inquire%20about%20fresh%20meat"
                 target="_blank" class="btn btn-whatsapp-lg">
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp: 7397471230
               </a>
@@ -5423,10 +5325,7 @@
         <!-- Col 1: Brand Info -->
         <div class="footer-col brand-col">
           <div class="footer-logo">
-            <img
-              src="../../.gemini/antigravity-ide/brain/0de3ed73-c049-4ff8-ad76-60bf8a2cb155/.user_uploaded/media_1792169016334.png"
-              alt="Syed Broilers & Mutton Stall Logo" class="footer-logo-img"
-              onerror="this.onerror=null; this.src='assets/images/shop-logo.png';">
+            <img src="assets/images/website-logo.png" alt="Syed Broilers & Mutton Stall Logo" class="footer-logo-img">
             <span class="f-name">SYED BROILERS & MUTTON STALL</span>
           </div>
           <p class="footer-tagline">
@@ -5446,8 +5345,9 @@
           <ul class="footer-links">
             <li><a href="#cuts">Fresh Meat Cuts</a></li>
             <li><a href="#rates">Today's Rate Board</a></li>
-            <li><a href="#estimator">Order Price Estimator</a></li>
             <li><a href="#butchery">Hygiene Standards</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#testimonials">Customer Reviews</a></li>
             <li><a href="#location">Stall Location & Hours</a></li>
           </ul>
         </div>
@@ -5491,62 +5391,13 @@
   <div class="mobile-sticky-bar" id="mobileStickyBar">
     <a href="tel:7397471230" class="sticky-action call-action">
       <i class="fa-solid fa-phone"></i>
-      <span>Call 7397471230</span>
+      <span>Call Stall</span>
     </a>
-    <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall%2C%20I%20want%20to%20order%20meat"
-      target="_blank" class="sticky-action wa-action">
+    <a href="https://wa.me/917397471230?text=Hello%20Syed%20Broilers%20%26%20Mutton%20Stall" target="_blank"
+      class="sticky-action wa-action">
       <i class="fa-brands fa-whatsapp"></i>
-      <span>Order on WhatsApp</span>
+      <span>WhatsApp Us</span>
     </a>
-  </div>
-
-  <!-- QUICK ORDER MODAL -->
-  <div class="modal-overlay" id="orderModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeOrderModal()" aria-label="Close dialog">&times;</button>
-      <div class="modal-header">
-        <span class="modal-sub">Fresh Meat Pre-Order</span>
-        <h3 id="modalItemTitle">Pre-Order Fresh Meat</h3>
-      </div>
-      <div class="modal-body">
-        <div class="modal-price-tag">Rate: <span id="modalItemPrice">₹240</span>/kg</div>
-
-        <div class="modal-field">
-          <label>Select Weight / Quantity:</label>
-          <div class="modal-qty-buttons">
-            <button type="button" class="m-qty-btn" onclick="setModalQty(0.5)">0.5 kg</button>
-            <button type="button" class="m-qty-btn active" onclick="setModalQty(1.0)">1 kg</button>
-            <button type="button" class="m-qty-btn" onclick="setModalQty(1.5)">1.5 kg</button>
-            <button type="button" class="m-qty-btn" onclick="setModalQty(2.0)">2 kg</button>
-          </div>
-        </div>
-
-        <div class="modal-field">
-          <label for="modalPrepSelect">How Should the Butcher Chop the Meat?</label>
-          <select id="modalPrepSelect" class="modal-select">
-            <option value="Medium Curry Cut">Medium Curry Cut</option>
-            <option value="Large Biryani Chunks with Nalli">Large Biryani Chunks with Nalli</option>
-            <option value="Small Chukka / Fry Cut">Small Chukka / Fry Cut</option>
-            <option value="Skinless Cleaned">Skinless Cleaned</option>
-            <option value="Turmeric Dip / Wash">Turmeric Dip / Wash</option>
-          </select>
-        </div>
-
-        <div class="modal-field">
-          <label for="modalNotes">Pickup / Delivery Note (Optional):</label>
-          <input type="text" id="modalNotes" class="modal-input" placeholder="e.g. Pickup at 8am / Anna Nagar delivery">
-        </div>
-
-        <div class="modal-total-line">
-          <span>Estimated Total:</span>
-          <strong id="modalTotalPrice">₹240</strong>
-        </div>
-
-        <button class="btn btn-modal-send" onclick="sendModalWhatsAppOrder()">
-          <i class="fa-brands fa-whatsapp"></i> Send Order to 7397471230
-        </button>
-      </div>
-    </div>
   </div>
 
   <!-- TOAST NOTIFICATION -->
@@ -5555,66 +5406,45 @@
     <span id="toastMessage">Address copied to clipboard!</span>
   </div>
 
-  <!-- Scripts: External + Full Inlined Implementation for Bulletproof Local Execution -->
-  <script src="script.js"></script>
+  <!-- Scripts: Self-contained interactive engine for web & local file:/// execution -->
   <script>
     /**
      * SYED BROILERS & MUTTON STALL - INTERACTIVE ENGINE
      * Anna Nagar, Madurai | Contact: 7397471230 / 6383184080
      */
-    document.addEventListener('DOMContentLoaded', () => {
+    let syedAppInitialized = false;
+
+    function initApp() {
+      if (syedAppInitialized) return;
+      syedAppInitialized = true;
+
       initThemeToggle();
       initLiveShopStatus();
       initRateDate();
       initHeaderScroll();
       initMobileDrawer();
       initCategoryFilters();
-      initEstimator();
       initFaqAccordion();
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
 
     function initThemeToggle() {
-      const themeToggleBtn = document.getElementById('themeToggleBtn');
-      const drawerThemeToggleBtn = document.getElementById('drawerThemeToggleBtn');
-      const themeText = document.getElementById('themeText');
-      const drawerThemeText = document.getElementById('drawerThemeText');
-
-      function updateThemeUI(theme) {
-        const isLight = theme === 'light';
-        if (themeText) {
-          themeText.textContent = isLight ? 'Dark' : 'Light';
-        }
-        if (drawerThemeText) {
-          drawerThemeText.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-        }
-        if (themeToggleBtn) {
-          const label = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-          themeToggleBtn.setAttribute('title', label);
-          themeToggleBtn.setAttribute('aria-label', label);
-        }
-      }
-
-      function toggleTheme(e) {
-        if (e) e.preventDefault();
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', nextTheme);
-        try {
-          localStorage.setItem('syed_stall_theme', nextTheme);
-        } catch (err) { }
-        updateThemeUI(nextTheme);
-        showToast(nextTheme === 'light' ? '☀️ Switched to Light Mode' : '🌙 Switched to Dark Mode');
-      }
-
-      // Sync button labels on load
-      const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      // Initial theme: always starts in light mode unless user toggled during this visit
+      const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
       updateThemeUI(initialTheme);
 
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const drawerThemeToggleBtn = document.getElementById('drawerThemeToggleBtn');
       if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleBtn.onclick = window.toggleTheme;
       }
       if (drawerThemeToggleBtn) {
-        drawerThemeToggleBtn.addEventListener('click', toggleTheme);
+        drawerThemeToggleBtn.onclick = window.toggleTheme;
       }
     }
 
@@ -5642,7 +5472,7 @@
       if (isOpen) {
         statusText.textContent = 'OPEN NOW • Fresh Stock Ready';
       } else {
-        statusText.textContent = 'OPENS 6:00 AM • Accepting WhatsApp Orders';
+        statusText.textContent = 'OPENS 6:00 AM • Contact Stall: 7397471230';
         const dot = statusBadge.querySelector('.status-dot');
         if (dot) dot.style.backgroundColor = '#ffb703';
         statusBadge.style.color = '#ffb703';
@@ -5715,244 +5545,6 @@
         });
       });
     }
-
-    let estimatorState = {
-      selectedMeat: 'Fresh Farm Broiler Chicken',
-      rate: 240,
-      isFixedPrice: false,
-      weight: 1.0,
-      prepStyle: 'Medium Curry Cut',
-      orderMode: 'Store Pickup at Anna Nagar Stall',
-      customerName: ''
-    };
-
-    function initEstimator() {
-      const meatRadios = document.querySelectorAll('input[name="meatSelection"]');
-      meatRadios.forEach(radio => {
-        radio.addEventListener('change', () => {
-          document.querySelectorAll('.cut-radio-label').forEach(lbl => lbl.classList.remove('active'));
-          radio.closest('.cut-radio-label').classList.add('active');
-
-          estimatorState.selectedMeat = radio.value;
-          estimatorState.rate = parseFloat(radio.getAttribute('data-rate'));
-          estimatorState.isFixedPrice = radio.getAttribute('data-is-fixed') === 'true';
-
-          const weightGroup = document.getElementById('weightGroup');
-          if (weightGroup) {
-            weightGroup.style.opacity = estimatorState.isFixedPrice ? '0.6' : '1';
-          }
-
-          updateEstimatorSummary();
-        });
-      });
-
-      const slider = document.getElementById('weightSlider');
-      const weightDisplay = document.getElementById('weightDisplayValue');
-      const weightPills = document.querySelectorAll('.weight-pill');
-
-      if (slider) {
-        slider.addEventListener('input', (e) => {
-          const val = parseFloat(e.target.value);
-          estimatorState.weight = val;
-          if (weightDisplay) weightDisplay.textContent = `${val.toFixed(2)} kg`;
-
-          weightPills.forEach(pill => {
-            if (parseFloat(pill.getAttribute('data-weight')) === val) {
-              pill.classList.add('active');
-            } else {
-              pill.classList.remove('active');
-            }
-          });
-
-          updateEstimatorSummary();
-        });
-      }
-
-      weightPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          weightPills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-
-          const val = parseFloat(pill.getAttribute('data-weight'));
-          estimatorState.weight = val;
-          if (slider) slider.value = val;
-          if (weightDisplay) weightDisplay.textContent = `${val.toFixed(2)} kg`;
-
-          updateEstimatorSummary();
-        });
-      });
-
-      const prepRadios = document.querySelectorAll('input[name="prepStyle"]');
-      prepRadios.forEach(r => {
-        r.addEventListener('change', () => {
-          estimatorState.prepStyle = r.value;
-          updateEstimatorSummary();
-        });
-      });
-
-      const modeRadios = document.querySelectorAll('input[name="orderMode"]');
-      modeRadios.forEach(m => {
-        m.addEventListener('change', () => {
-          document.querySelectorAll('.mode-label').forEach(lbl => lbl.classList.remove('active'));
-          m.closest('.mode-label').classList.add('active');
-          estimatorState.orderMode = m.value;
-          updateEstimatorSummary();
-        });
-      });
-
-      const nameInput = document.getElementById('customerNameInput');
-      if (nameInput) {
-        nameInput.addEventListener('input', (e) => {
-          estimatorState.customerName = e.target.value.trim();
-          updateEstimatorSummary();
-        });
-      }
-
-      updateEstimatorSummary();
-    }
-
-    function updateEstimatorSummary() {
-      const sumCut = document.getElementById('sumCut');
-      const sumWeight = document.getElementById('sumWeight');
-      const sumPrep = document.getElementById('sumPrep');
-      const sumMode = document.getElementById('sumMode');
-      const sumTotal = document.getElementById('sumTotal');
-      const waTrigger = document.getElementById('whatsappOrderTrigger');
-
-      let totalAmount = 0;
-      let weightText = `${estimatorState.weight.toFixed(2)} kg`;
-
-      if (estimatorState.isFixedPrice) {
-        totalAmount = Math.round(estimatorState.rate * Math.max(1, Math.round(estimatorState.weight)));
-        weightText = `${Math.max(1, Math.round(estimatorState.weight))} Set(s)`;
-      } else {
-        totalAmount = Math.round(estimatorState.rate * estimatorState.weight);
-      }
-
-      if (sumCut) sumCut.textContent = estimatorState.selectedMeat;
-      if (sumWeight) sumWeight.textContent = weightText;
-      if (sumPrep) sumPrep.textContent = estimatorState.prepStyle;
-      if (sumMode) sumMode.textContent = estimatorState.orderMode.includes('Pickup') ? 'Stall Pickup' : 'Home Delivery';
-      if (sumTotal) sumTotal.textContent = totalAmount.toLocaleString('en-IN');
-
-      const phone = '7397471230';
-      const customerDetails = estimatorState.customerName ? `\n*Customer Info:* ${estimatorState.customerName}` : '';
-
-      const rawMessage =
-        `🍗 *SYED BROILERS & MUTTON STALL - ORDER*
-----------------------------------------
-*Item:* ${estimatorState.selectedMeat}
-*Quantity / Weight:* ${weightText}
-*Chopping Preference:* ${estimatorState.prepStyle}
-*Mode:* ${estimatorState.orderMode}${customerDetails}
-*Estimated Total:* ₹${totalAmount.toLocaleString('en-IN')}
-----------------------------------------
-_Please confirm fresh cut availability & keep packed!_
-Location: Anna Nagar, Madurai (Contact: 7397471230 / 6383184080)`;
-
-      if (waTrigger) {
-        waTrigger.href = `https://wa.me/91${phone}?text=${encodeURIComponent(rawMessage)}`;
-      }
-    }
-
-    function quickAddToEstimator(meatName, rate) {
-      const radios = document.querySelectorAll('input[name="meatSelection"]');
-      let matched = false;
-      radios.forEach(r => {
-        if (r.value.toLowerCase().includes(meatName.toLowerCase()) || meatName.toLowerCase().includes(r.value.toLowerCase())) {
-          r.checked = true;
-          r.dispatchEvent(new Event('change'));
-          matched = true;
-        }
-      });
-      if (!matched) {
-        estimatorState.selectedMeat = meatName;
-        estimatorState.rate = rate;
-        updateEstimatorSummary();
-      }
-      const estimatorSection = document.getElementById('estimator');
-      if (estimatorSection) {
-        estimatorSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      showToast(`Selected "${meatName}" in Order Estimator!`);
-    }
-
-    let modalCurrentCut = 'Fresh Farm Broiler Chicken';
-    let modalCurrentRate = 240;
-    let modalCurrentQty = 1.0;
-
-    function openOrderModal(cutName, rate) {
-      modalCurrentCut = cutName;
-      modalCurrentRate = rate;
-      modalCurrentQty = 1.0;
-
-      const modal = document.getElementById('orderModal');
-      const title = document.getElementById('modalItemTitle');
-      const price = document.getElementById('modalItemPrice');
-
-      if (title) title.textContent = cutName;
-      if (price) price.textContent = `₹${rate}`;
-
-      updateModalTotal();
-      if (modal) modal.classList.add('open');
-    }
-
-    function closeOrderModal() {
-      const modal = document.getElementById('orderModal');
-      if (modal) modal.classList.remove('open');
-    }
-
-    function setModalQty(qty) {
-      modalCurrentQty = qty;
-      const buttons = document.querySelectorAll('.m-qty-btn');
-      buttons.forEach(b => {
-        if (parseFloat(b.textContent) === qty) {
-          b.classList.add('active');
-        } else {
-          b.classList.remove('active');
-        }
-      });
-      updateModalTotal();
-    }
-
-    function updateModalTotal() {
-      const totalEl = document.getElementById('modalTotalPrice');
-      if (!totalEl) return;
-      const total = Math.round(modalCurrentRate * modalCurrentQty);
-      totalEl.textContent = `₹${total.toLocaleString('en-IN')}`;
-    }
-
-    function sendModalWhatsAppOrder() {
-      const prepSelect = document.getElementById('modalPrepSelect');
-      const notesInput = document.getElementById('modalNotes');
-
-      const prep = prepSelect ? prepSelect.value : 'Medium Curry Cut';
-      const notes = notesInput ? notesInput.value.trim() : '';
-      const total = Math.round(modalCurrentRate * modalCurrentQty);
-      const notesText = notes ? `\n*Note:* ${notes}` : '';
-
-      const message =
-        `🍗 *SYED BROILERS & MUTTON STALL - PRE-ORDER*
-----------------------------------------
-*Item:* ${modalCurrentCut}
-*Weight:* ${modalCurrentQty} kg
-*Chopping Style:* ${prep}${notesText}
-*Estimated Amount:* ₹${total.toLocaleString('en-IN')}
-----------------------------------------
-_Please confirm fresh cut availability at Anna Nagar stall._
-(Contact: 7397471230 / 6383184080)`;
-
-      const phone = '7397471230';
-      window.open(`https://wa.me/91${phone}?text=${encodeURIComponent(message)}`, '_blank');
-      closeOrderModal();
-    }
-
-    document.addEventListener('click', (e) => {
-      const modal = document.getElementById('orderModal');
-      if (modal && modal.classList.contains('open') && e.target === modal) {
-        closeOrderModal();
-      }
-    });
 
     function initFaqAccordion() {
       const items = document.querySelectorAll('.faq-item');
